@@ -1,0 +1,15 @@
+<app-shell [darkLinks]="darkLinks" [useOnlyDarkLogo]="true">
+
+
+  <nav class="nav navbar-nav justify-content-center mt-4 mt-md-0 flex-row"
+    [ngClass]="{ 'ml-md-auto': !isRightPositioned() }">
+    <a class="btn btn-rounded btn-outline mr-3 px-3">
+      <fa-icon [icon]="signInAlt" class="d-none d-md-inline mr-md-0 mr-lg-2"></fa-icon>
+      <span class="d-md-none d-lg-inline">View Courses</span>
+    </a>
+    <a class="btn btn-rounded btn-solid px-3">
+      <fa-icon [icon]="userPlus" class="d-none d-md-inline mr-md-0 mr-lg-2"></fa-icon>
+      <span class="d-md-none d-lg-inline">Contact Us</span>
+    </a>
+  </nav>
+</app-shell>
