@@ -57,7 +57,10 @@
           <div class="col-md-6" *ngFor="let item of items">
             <div class="media pb-3">
               <div class="bg-light p-3 rounded d-flex align-items-center justify-content-center mr-3">
-                <dc-feather [name]="item.icon" [iconClass]="'stroke-primary'"></dc-feather>
+
+
+                <i-feather [name]="item.icon" class="wh36 stroke-primary"></i-feather>
+
               </div>
               <div class="media-body">
                 <h5>{{ item.title }}</h5>
