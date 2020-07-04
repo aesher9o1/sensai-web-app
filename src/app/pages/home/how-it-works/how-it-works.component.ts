@@ -9,21 +9,21 @@ export class HowItWorksComponent implements OnInit {
   elements = [
     {
       icon: 'plan',
-      title: 'Choose a course',
+      title: 'Personalised Courses',
       description:
-        'Choose from a variety of courses we offer, it is encouraged from our site to ask for a demo class',
+        'Curriculum created with love by our experienced industrial experts for the smooth learning experience/',
     },
     {
       icon: 'payment',
-      title: 'Complete payment',
+      title: 'Interactive Learning ',
       description:
-        'Book a slot and class timings, due to us keeping batch sizes of 4-6 negotiations in timing is also possible',
+        'With batch sizes of only five students, we aim to encourage one on one interactions for better understanding of the students, with more focus on hands on experience.',
     },
     {
       icon: 'work',
-      title: "Let's work",
+      title: 'Experienced Mentors',
       description:
-        'We share you the credentials to join the batch learn at your own pace clear doubts and we make sure you gain 100% of what you pay',
+        'Our mentors are experienced in their respective domains with vast knowledge and industrial experience.',
     },
   ];
   constructor() {}

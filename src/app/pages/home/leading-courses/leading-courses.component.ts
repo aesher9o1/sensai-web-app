@@ -10,22 +10,26 @@ export class LeadingCoursesComponent implements OnInit {
     { name: 'Javascript', image: 'javascript' },
     { name: 'Javascript', image: 'es6' },
     { name: 'Styles', image: 'node-sass' },
+    // { name: 'Styles', image: 'node-sass' },
+    // { name: 'Styles', image: 'node-sass' },
+    // { name: 'Styles', image: 'node-sass' },
   ];
   items = [
     {
       icon: 'activity',
-      title: 'Live Mentorship',
-      description: '',
+      title: 'Siddharth Jaidka',
+      description: '4+ years of experience, Senior Software Engineer, QuillBot',
     },
     {
       icon: 'upload-cloud',
-      title: 'Practice & Practicals',
-      description: '',
+      title: 'Vidhyanshu Jain',
+      description: '2+ years of experience, Software Engineer, Dell',
     },
     {
       icon: 'zap',
-      title: 'Talks and Seminar',
-      description: '',
+      title: 'Tanya Agarwal',
+      description:
+        '2+ years of experience, Quality Analyst, General Electronics',
     },
     {
       icon: 'hexagon',
