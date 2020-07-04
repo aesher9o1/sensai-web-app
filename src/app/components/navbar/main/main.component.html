@@ -1,4 +1,12 @@
 <app-shell [darkLinks]="true" [useOnlyDarkLogo]="true">
+  <ul class="nav navbar-nav" [class.ml-auto]="true">
+    <li class="nav-item"><a class="nav-link" [routerLink]="['/home']">Home</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['/about']">Team</a></li>
+    <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']">Contact</a></li>
+    <li class="nav-item"><a class="nav-link" [routerLink]="['/faqs']">Faqs</a></li> -->
+
+  </ul>
+
   <nav class="nav navbar-nav justify-content-center mt-4 mt-md-0 flex-row"
     [ngClass]="{ 'ml-md-auto': !isRightPositioned() }">
     <a class="btn btn-rounded btn-outline mr-3 px-3">
