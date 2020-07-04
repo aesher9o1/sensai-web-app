@@ -73,6 +73,8 @@ import { SkilledWarriorComponent } from './pages/home/skilled-warrior/skilled-wa
 import { TestimonialsComponent } from './pages/home/testimonials/testimonials.component';
 import { CtaComponent } from './pages/home/cta/cta.component';
 import { CoursesWeTeachComponent } from './pages/home/courses-we-teach/courses-we-teach.component';
+import { HomeComponent } from './pages/home/home/home.component';
+import { MentorsComponent } from './pages/team/mentors/mentors.component';
 
 // Select some icons (use an object, not an array)
 const icons = {
@@ -144,6 +146,8 @@ const icons = {
     TestimonialsComponent,
     CtaComponent,
     CoursesWeTeachComponent,
+    HomeComponent,
+    MentorsComponent,
   ],
   imports: [
     BrowserModule,
