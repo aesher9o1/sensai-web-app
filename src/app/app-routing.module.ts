@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home/home.component';
 import { MentorsComponent } from './pages/team/mentors/mentors.component';
+import { importExpr } from '@angular/compiler/src/output/output_ast';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'team',
-    component: MentorsComponent,
+    loadChildren: () =>
+      import('./pages/team/team.module').then((m) => m.TeamModule),
   },
 ];
 

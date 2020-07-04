@@ -132,23 +132,7 @@ const icons = {
 };
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    ShellComponent,
-    MainComponent,
-    HeaderComponent,
-    BubblesComponent,
-    BubblesMainComponent,
-    HowItWorksComponent,
-    LeadingCoursesComponent,
-    SkilledWarriorComponent,
-    TestimonialsComponent,
-    CtaComponent,
-    CoursesWeTeachComponent,
-    HomeComponent,
-    MentorsComponent,
-  ],
+  declarations: [AppComponent, FooterComponent, ShellComponent, MainComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
