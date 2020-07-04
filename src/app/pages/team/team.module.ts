@@ -61,6 +61,7 @@ import {
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { FeatherModule } from 'angular-feather';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FounderComponent } from './founder/founder.component';
 
 const icons = {
   Phone,
@@ -116,7 +117,12 @@ const icons = {
   Bell,
 };
 @NgModule({
-  declarations: [MentorsComponent, CoreComponent, TeamPageComponent],
+  declarations: [
+    MentorsComponent,
+    CoreComponent,
+    TeamPageComponent,
+    FounderComponent,
+  ],
   imports: [
     CommonModule,
     TeamRoutingModule,
