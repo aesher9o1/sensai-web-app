@@ -18,7 +18,8 @@ export class LeadingCoursesComponent implements OnInit {
     {
       icon: 'activity',
       title: 'Siddharth Jaidka',
-      description: '4+ years of experience, Senior Software Engineer, QuillBot',
+      description:
+        '4+ years of experience, Full Stack Software Developer, QuillBot',
     },
     {
       icon: 'upload-cloud',
