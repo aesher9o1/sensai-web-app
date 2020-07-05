@@ -69,6 +69,7 @@ import {
   Bell,
 } from 'angular-feather/icons';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const icons = {
   Phone,
@@ -137,6 +138,7 @@ const icons = {
     CtaComponent,
     CoursesWeTeachComponent,
     HomeComponent,
+    ContactUsComponent,
   ],
   imports: [
     CommonModule,

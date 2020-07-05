@@ -1,0 +1,74 @@
+<section class="section mt-5n ">
+  <div class="container bring-to-front pt-0">
+    <div class="row align-items-center gap-y">
+      <div class="col-md-6">
+        <div class="shadow bg-contrast p-4 rounded">
+          <form class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up">
+            <div class="form-group">
+              <label for="contact_email" class="bold mb-0">Email address</label>
+              <small id="emailHelp" class="form-text text-secondary mt-0 mb-2 italic">We'll never share your email with
+                anyone
+                else.</small>
+              <input type="email" name="email" id="contact_email" class="form-control bg-contrast"
+                placeholder="Valid Email" required />
+            </div>
+            <div class="form-group">
+              <label for="contact_number" class="bold">Contact Number</label>
+              <input type="number" name="number" id="contact_number" class="form-control bg-contrast"
+                placeholder="Contact" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact_email" class="bold">Subject</label>
+              <input type="text" name="subject" id="contact_subject" class="form-control bg-contrast"
+                placeholder="Subject" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact_email" class="bold">Message</label>
+              <textarea name="message" id="contact_message" class="form-control bg-contrast"
+                placeholder="What do you want to let us know?" rows="8" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <button id="contact-submit" name="submit" type="submit" class="btn btn-primary btn-rounded">
+                Schedule a call
+              </button>
+            </div>
+          </form>
+
+          <div class="response-message">
+            <div class="section-heading">
+              <i class="fas fa-check font-lg"></i>
+              <p class="font-md m-0">Thank you!</p>
+              <p class="response">Your message has been send, we will contact you as soon as possible.</p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="col-md-5 ml-md-auto">
+        <div class="section-heading">
+          <!-- <dc-badge [bg]="'info'" [text]="'contrast'" [small]>Let's do business</dc-badge> -->
+          <h2>Follow us on our social media handles</h2>
+        </div>
+
+
+        <nav class="nav justify-content-center justify-content-md-start">
+          <a href="#" class="btn btn-circle btn-sm brand-facebook mr-3">
+            <fa-icon [icon]="fa.facebook"></fa-icon>
+          </a>
+          <a href="#" class="btn btn-circle btn-sm brand-twitter mr-3">
+            <fa-icon [icon]="fa.twitter"></fa-icon>
+          </a>
+          <a href="#" class="btn btn-circle btn-sm brand-instagram">
+            <fa-icon [icon]="fa.instagram"></fa-icon>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
