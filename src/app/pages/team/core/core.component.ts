@@ -23,7 +23,7 @@ export class CoreComponent implements OnInit {
       gravity: 'north',
       title: 'Priya Arora',
       description: 'Finance at Delhivery, Research Analyst at Benori',
-      image: 'HLG_s9b2Uuw',
+      image: 'url(assets/img/team/priya.jpg)',
     },
     {
       gravity: 'north',
@@ -34,8 +34,8 @@ export class CoreComponent implements OnInit {
     {
       gravity: 'north',
       title: 'Shreya Jaggi',
-      description: 'Integrating the API with your new template',
-      image: 'HLG_s9b2Uuw',
+      description: 'Our fabulous content writer',
+      image: 'url(assets/img/team/shreya.jpg)',
     },
     {
       gravity: 'north',
@@ -45,9 +45,9 @@ export class CoreComponent implements OnInit {
     },
     {
       gravity: 'north',
-      title: 'Priyansh ',
-      description: 'Integrating the API with your new template',
-      image: 'HLG_s9b2Uuw',
+      title: 'Priyansh Khandelwal',
+      description: 'Our cool visual designer',
+      image: 'url(assets/img/team/priyansh.jpg)',
     },
     {
       gravity: 'north',

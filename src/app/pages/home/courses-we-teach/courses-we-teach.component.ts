@@ -10,31 +10,43 @@ export class CoursesWeTeachComponent implements OnInit {
   cards = [
     {
       img: '2',
-      title: 'jQuery',
+      title: 'Python',
+      description:
+        'Want to learn Data Science or Machine learning? Do you have a knack for development? Python is your way towards a myriad of skills.',
       class: 'mt-6 ml-lg-auto',
-      bg: 'bg-primary-gradient',
+      bg: 'bg-warning-gradient',
       animation: 'fade-up',
+      link: '',
     },
     {
       img: '1',
-      title: 'Codebase',
+      title: 'C++',
       class: 'mr-lg-auto',
+      description:
+        'Skill up yourself and become a pro at the most powerful programming language in the world.',
       bg: 'bg-info-gradient',
       animation: 'fade-up',
+      link: '',
     },
     {
       img: '3',
-      title: 'OpenCart',
+      title: 'Internet of Things',
       class: 'ml-lg-auto',
+      description:
+        'Learn to make intelligent machines and start your journey towards the future.',
       bg: 'bg-danger-gradient',
       animation: 'fade-up',
+      link: '',
     },
     {
       img: '4',
-      title: 'Morpheus',
+      title: 'Solidworks',
+      description:
+        'Design, Assemble, Create and become pro in Solidworks effortlessly.',
       class: 'mt-6n mr-lg-auto',
-      bg: 'bg-success-gradient',
+      bg: 'bg-secondary-gradient',
       animation: 'fade-up',
+      link: '',
     },
   ];
   longAarrowAltRight = faLongArrowAltRight;
