@@ -15,6 +15,8 @@ import { CoursesWeTeachComponent } from './courses-we-teach/courses-we-teach.com
 import { HomeComponent } from './home/home.component';
 import { FeatherModule } from 'angular-feather';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
 import {
   Phone,
   Star,
@@ -146,6 +148,7 @@ const icons = {
     FeatherModule.pick(icons),
     FontAwesomeModule,
     SwiperModule,
+    ScrollToModule.forRoot(),
   ],
 })
 export class HomeModule {}
