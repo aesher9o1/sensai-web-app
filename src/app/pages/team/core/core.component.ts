@@ -13,12 +13,7 @@ export class CoreComponent implements OnInit {
     //   description: 'Discover how to get started with DashCore now',
     //   image: 'EykWcFEtFqo',
     // },
-    {
-      gravity: 'east',
-      title: 'Syed Amjad',
-      description: 'Learn how to fit the theme to your own needs',
-      image: 'MXghcI8hcWU',
-    },
+
     {
       gravity: 'north',
       title: 'Priya Arora',
@@ -26,10 +21,16 @@ export class CoreComponent implements OnInit {
       image: 'url(assets/img/team/priya.jpg)',
     },
     {
+      gravity: 'east',
+      title: 'Syed Amjad',
+      description: 'Learn how to fit the theme to your own needs',
+      image: 'url(assets/img/team/syed.jpg)',
+    },
+    {
       gravity: 'north',
       title: 'Sonali Banik',
       description: 'Integrating the API with your new template',
-      image: 'HLG_s9b2Uuw',
+      image: 'url(assets/img/team/sonali.jpg)',
     },
     {
       gravity: 'north',
@@ -41,7 +42,7 @@ export class CoreComponent implements OnInit {
       gravity: 'north',
       title: 'Vaibhav Garg',
       description: 'Integrating the API with your new template',
-      image: 'HLG_s9b2Uuw',
+      image: 'url(assets/img/team/vaibhav.jpg)',
     },
     {
       gravity: 'north',
@@ -53,7 +54,7 @@ export class CoreComponent implements OnInit {
       gravity: 'north',
       title: 'Heta',
       description: 'Integrating the API with your new template',
-      image: 'HLG_s9b2Uuw',
+      image: 'url(assets/img/team/heta.jpg)',
     },
   ];
   constructor() {}

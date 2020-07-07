@@ -20,13 +20,13 @@
                 </p>
 
                 <figure class="">
-                  <img src="assets/img/logos/webpack.svg" class="img-responsive mx-auto" alt="" />
+                  <img src="assets/img/companies/microsoft.png" class="img-responsive mx-auto" alt="" />
                 </figure>
               </div>
               <div class="col-md-4 d-flex flex-column justify-content-around">
                 <div class="text-center" *ngFor="let stack of stacks">
                   <figure class="mockup">
-                    <img [src]="'assets/img/logos/' + stack.image + '.svg'" alt="" />
+                    <img [src]="'assets/img/companies/' + stack.image + '.png'" alt="" />
                   </figure>
                 </div>
               </div>
@@ -56,8 +56,10 @@
         <div class="row">
           <div class="col-md-6" *ngFor="let item of items">
             <div class="media pb-3">
-              <div class="bg-light p-3 rounded d-flex align-items-center justify-content-center mr-3">
-                <i-feather [name]="item.icon" class="wh36 stroke-primary"></i-feather>
+              <div class="bg-light p-3 rounded d-flex align-items-center justify-content-center mr-3"
+                [style.background-image]="item.icon"
+                style="background-size: cover; background-position: center; min-width: 100px; min-height: 100px;">
+                <!-- <i-feather [name]="item.icon" class="wh36 stroke-primary"></i-feather> -->
               </div>
               <div class="media-body">
                 <h5>{{ item.title }}</h5>

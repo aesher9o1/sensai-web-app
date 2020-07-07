@@ -16,6 +16,16 @@ export class TestimonialsComponent implements OnInit {
     pagination: false,
   };
 
+  items = [
+    {
+      name: 'Aryan Dhiman',
+      description:
+        'Since my childhood, I always had keen interest in Computer Science. Recommended by a friend I joined the course and I loved it. Coding is so fun and our friendly Sensai makes it more fun. I would recommend Python for everyone. Till then #learnandskillup',
+      designation: ' Class 11, Our Student',
+      image: '',
+    },
+  ];
+
   constructor() {}
 
   ngOnInit() {}

@@ -7,35 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeadingCoursesComponent implements OnInit {
   stacks = [
-    { name: 'Javascript', image: 'javascript' },
-    { name: 'Javascript', image: 'es6' },
-    { name: 'Styles', image: 'node-sass' },
+    { name: 'Dell', image: 'dell' },
+    { name: 'GE', image: 'ge' },
+    { name: 'QuillBot', image: 'quill' },
     // { name: 'Styles', image: 'node-sass' },
     // { name: 'Styles', image: 'node-sass' },
     // { name: 'Styles', image: 'node-sass' },
   ];
   items = [
     {
-      icon: 'activity',
+      icon: 'url(assets/img/mentors/jaidka.jpg)',
       title: 'Siddharth Jaidka',
-      description:
-        '4+ years of experience, Full Stack Software Developer, QuillBot',
+      description: 'Full Stack Software Developer, QuillBot',
     },
     {
-      icon: 'upload-cloud',
+      icon: 'url(assets/img/mentors/vidhu.jpg)',
       title: 'Vidhyanshu Jain',
-      description: '2+ years of experience, Software Engineer, Dell',
+      description: 'Software Engineer, Dell',
     },
     {
-      icon: 'zap',
+      icon: 'url(assets/img/mentors/tanya.jpg)',
       title: 'Tanya Agarwal',
-      description:
-        '2+ years of experience, Quality Analyst, General Electronics',
+      description: 'Enterprise Solution Specialist, General Electronics',
     },
     {
-      icon: 'hexagon',
-      title: 'Project Driven',
-      description: '',
+      icon: 'url(assets/img/mentors/jaidka.jpg)',
+      title: 'Tanuj Sahal',
+      description: 'Upcoming Software Engineer at Microsoft',
     },
   ];
 
