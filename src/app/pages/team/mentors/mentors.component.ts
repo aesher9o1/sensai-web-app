@@ -46,8 +46,8 @@ export class MentorsComponent implements OnInit {
       gravity: 'north',
       title: 'Shivansh Aggarwal',
       description:
-        '2+ years in C++, Web Developer at TechProdigy, currently working on an International Mars Rover Project',
-      image: 'url(assets/img/mentors/ananya.jpg)',
+        'Researcher at Institute of Aerospace Technology, HSB Germany in Design & Optimization of Aerospace Tech',
+      image: 'url(assets/img/mentors/shivansh.jpg)',
     },
     {
       gravity: 'north',
@@ -60,7 +60,7 @@ export class MentorsComponent implements OnInit {
       gravity: 'north',
       title: 'Tarush Gupta',
       description:
-        '2+ years in C++, Web Developer at TechProdigy, currently working on an International Mars Rover Project',
+        '2+ years in IoT, has been working with different companies for Design and IoT like The Blog Event.',
       image: 'url(assets/img/mentors/tarush.jpg)',
     },
   ];

@@ -72,6 +72,9 @@ import {
 } from 'angular-feather/icons';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 const icons = {
   Phone,
@@ -149,6 +152,8 @@ const icons = {
     FontAwesomeModule,
     SwiperModule,
     ScrollToModule.forRoot(),
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
 })
 export class HomeModule {}

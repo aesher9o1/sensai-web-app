@@ -31,7 +31,7 @@ export class LeadingCoursesComponent implements OnInit {
       description: 'Enterprise Solution Specialist, General Electronics',
     },
     {
-      icon: 'url(assets/img/mentors/jaidka.jpg)',
+      icon: 'url(assets/img/mentors/tanuj.jpg)',
       title: 'Tanuj Sahal',
       description: 'Upcoming Software Engineer at Microsoft',
     },

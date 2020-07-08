@@ -3,45 +3,59 @@
     <div class="row align-items-center gap-y">
       <div class="col-md-6">
         <div class="shadow bg-contrast p-4 rounded">
-          <form class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up">
+          <form class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up"
+            [formGroup]="contactForm">
             <div class="form-group">
               <label for="name" class="bold">Name</label>
-              <input type="text" name="name" id="name" class="form-control bg-contrast" placeholder="Name" required />
+              <input type="text" name="name" id="name" class="form-control bg-contrast" placeholder="Name" required
+                formControlName="name" />
             </div>
             <div class="form-group">
               <label for="contact_email" class="bold mb-0">Email address</label>
               <small id="emailHelp" class="form-text text-secondary mt-0 mb-2 italic">We'll never share your email with
                 anyone
                 else.</small>
-              <input type="email" name="email" id="contact_email" class="form-control bg-contrast" placeholder="Email"
-                required />
+              <input type="email" name="email" id="email" class="form-control bg-contrast" placeholder="Email"
+                formControlName="email" required />
             </div>
             <div class="form-group">
               <label for="contact_number" class="bold">Contact Number</label>
-              <input type="number" name="number" id="contact_number" class="form-control bg-contrast"
+              <input type="tel" name="phone" id="phone" class="form-control bg-contrast" formControlName="phone"
                 placeholder="Contact" required />
             </div>
 
             <div class="form-group">
               <label for="contact_email" class="bold">Subject</label>
-              <input type="text" name="subject" id="contact_subject" class="form-control bg-contrast"
-                placeholder="Subject" required />
+              <select formControlName="topic" class="form-control bg-contrast">
+                <option value="" selected class="d-none">Choose a topic</option>
+                <option value="python">Python Programming</option>
+                <option value="c-plus-plus">C++ Programming</option>
+                <option value="IoT">IoT/Robotics</option>
+                <option value="solidworks">SolidWorks</option>
+                <option value="others">Other</option>
+              </select>
             </div>
 
             <div class="form-group">
               <label for="contact_email" class="bold">Message</label>
-              <textarea name="message" id="contact_message" class="form-control bg-contrast"
+              <textarea name="message" id="contact_message" class="form-control bg-contrast" formControlName="message"
                 placeholder="Something you want us to know?" rows="8" required></textarea>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <small [class]="message.class">{{message.message}}</small>
+              </div>
             </div>
 
             <div class="form-group">
-              <button id="contact-submit" name="submit" type="submit" class="btn btn-primary btn-rounded">
+              <button id="contact-submit" name="submit" type="submit" class="btn btn-primary btn-rounded"
+                (click)="submitForm()">
                 Schedule a call
               </button>
             </div>
           </form>
 
-          <div class="response-message">
+          <div class=" response-message">
             <div class="section-heading">
               <i class="fas fa-check font-lg"></i>
               <p class="font-md m-0">Thank you!</p>

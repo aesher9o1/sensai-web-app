@@ -23,13 +23,13 @@ export class CoreComponent implements OnInit {
     {
       gravity: 'east',
       title: 'Syed Amjad',
-      description: 'Learn how to fit the theme to your own needs',
+      description: 'Loves agile environment and management',
       image: 'url(assets/img/team/syed.jpg)',
     },
     {
       gravity: 'north',
       title: 'Sonali Banik',
-      description: 'Integrating the API with your new template',
+      description: 'Operations under her, Upcoming L&T Employee',
       image: 'url(assets/img/team/sonali.jpg)',
     },
     {
@@ -41,7 +41,7 @@ export class CoreComponent implements OnInit {
     {
       gravity: 'north',
       title: 'Vaibhav Garg',
-      description: 'Integrating the API with your new template',
+      description: 'Designing has never been so easier',
       image: 'url(assets/img/team/vaibhav.jpg)',
     },
     {
@@ -53,7 +53,7 @@ export class CoreComponent implements OnInit {
     {
       gravity: 'north',
       title: 'Heta',
-      description: 'Integrating the API with your new template',
+      description: 'Valuable asset to the designing team',
       image: 'url(assets/img/team/heta.jpg)',
     },
   ];
