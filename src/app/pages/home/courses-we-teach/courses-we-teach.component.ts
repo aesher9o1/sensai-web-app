@@ -14,9 +14,10 @@ export class CoursesWeTeachComponent implements OnInit {
       description:
         'Want to learn Data Science or Machine learning? Do you have a knack for development? Python is your way towards a myriad of skills.',
       class: 'mt-6 ml-lg-auto',
-      bg: 'bg-warning-gradient',
+      bg: '#feab47',
       animation: 'fade-up',
-      link: '',
+      link:
+        'https://docs.google.com/document/d/1lW-KPVEzdwzKQ7089mJSq-IGrsSCqZHTFkV2cYMtqxE/edit?usp=sharing',
     },
     {
       img: '1',
@@ -24,9 +25,10 @@ export class CoursesWeTeachComponent implements OnInit {
       class: 'mr-lg-auto',
       description:
         'Skill up yourself and become a pro at the most powerful programming language in the world.',
-      bg: 'bg-info-gradient',
+      bg: '#dc0065',
       animation: 'fade-up',
-      link: '',
+      link:
+        'https://docs.google.com/document/d/1npmJzSPOnbJdRDCPnV3g_vIvKRXEwBkU-dbv0dPIBnI/edit?usp=sharing',
     },
     {
       img: '3',
@@ -34,9 +36,10 @@ export class CoursesWeTeachComponent implements OnInit {
       class: 'ml-lg-auto',
       description:
         'Learn to make intelligent machines and start your journey towards the future.',
-      bg: 'bg-danger-gradient',
+      bg: '#00a190',
       animation: 'fade-up',
-      link: '',
+      link:
+        'https://docs.google.com/document/d/1Wl0WijUIrizaJ5aYGNefkK_Ywu9r6qsI_w2FUpb8WnU/edit?usp=sharing',
     },
     {
       img: '4',
@@ -44,9 +47,10 @@ export class CoursesWeTeachComponent implements OnInit {
       description:
         'Design, Assemble, Create and become pro in Solidworks effortlessly.',
       class: 'mt-6n mr-lg-auto',
-      bg: 'bg-secondary-gradient',
+      bg: '#006787',
       animation: 'fade-up',
-      link: '',
+      link:
+        'https://docs.google.com/document/d/1g6QocKdTK6O5OXcyJcEGz7uZmLOGOzZUuYK7695FY6w/edit?usp=sharing',
     },
   ];
   longAarrowAltRight = faLongArrowAltRight;

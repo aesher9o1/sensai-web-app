@@ -18,15 +18,15 @@
       <div class="col-12 col-md-7 col-lg-6">
         <div class="row gap-y">
           <div class="col-6 col-sm-5 col-md-6 col-lg-5 {{ card.class }}" *ngFor="let card of cards">
-            <div class="{{ card.bg }} rounded text-contrast p-2 p-sm-4 shadow text-center"
+            <div class="rounded text-contrast p-2 p-sm-4 shadow text-center" [style.background-color]="card.bg"
               [attr.data-aos]="card.animation">
-              <img [src]="'assets/img/logos/' + card.img + '.svg'" class="img-responsive op-8 px-0 px-sm-4" alt="..." />
+              <!-- <img [src]="'assets/img/logos/' + card.img + '.svg'" class="img-responsive op-8 px-0 px-sm-4" alt="..." /> -->
 
               <p class="bold mt-5">{{ card.title }}</p>
 
               <p class="op-5 small">{{ card.description }}</p>
 
-              <a href="card.link;" class="btn btn-rounded btn-contrast mt-4">
+              <a href="{{ card.link }}" class="btn btn-rounded btn-contrast mt-4" target="_blank">
                 <fa-icon [icon]="longAarrowAltRight" class="d-inline-block d-sm-none"></fa-icon>
                 <span class="d-none d-sm-inline-block">Read More</span>
               </a>
