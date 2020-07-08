@@ -26,4 +26,12 @@ export class MainComponent implements OnInit {
   isRightPositioned() {
     return this.position === 'right';
   }
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+  }
 }
