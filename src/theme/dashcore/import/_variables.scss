@@ -44,41 +44,26 @@ $ibiza-blue: #007cb7;
 $light-shape-color: $beluga-light-5x;
 $light-shape-color-2: $beluga-light-4x;
 
-$app-landing-2-shapes-map: (
-  default: (
-    (
-      top: 0,
+$app-landing-2-shapes-map: (default: ((top: 0,
       left: 70,
       height: 140,
       width: 400,
-      attrs: (
-        "background-image": linear-gradient(45deg, theme-color("primary") 35%, theme-color("secondary") 110%)
-      )
-    ),
-    (
-      top: 0,
+      attrs: ("background-image": linear-gradient(45deg, theme-color("primary") 35%, theme-color("secondary") 110%))),
+    (top: 0,
       left: 65,
       height: 100,
       width: 300,
-      attrs: (
-        "background-image": linear-gradient(90deg, theme-color("primary") 0, theme-color("secondary") 100%)
-      )
-    ),
-    (
-      top: 0,
+      attrs: ("background-image": linear-gradient(90deg, theme-color("primary") 0, theme-color("secondary") 100%))),
+    (top: 0,
       left: 80,
       height: 200,
       width: 600,
-      attrs: (
-        "background-image": linear-gradient(90deg, theme-color("primary") 0, theme-color("secondary") 100%)
-      )
-    ),
-    (
-      top: 82,
+      attrs: ("background-image": linear-gradient(90deg, theme-color("primary") 0, theme-color("secondary") 100%))),
+    (top: 82,
       left: 85,
       height: 150,
       width: 150
-        /*,
+      /*,
       attrs: (
         "background-image":
           linear-gradient(
@@ -87,33 +72,13 @@ $app-landing-2-shapes-map: (
             $light-shape-color 100%
           )
       )*/
-    )
-  ),
-  md: (
-    (
-      left: 25
-    ),
-    (
-      left: 55
-    )
-  ),
-  lg: (
-    (
-      left: 35
-    ),
-    (
-      left: 45
-    )
-  ),
-  xl: (
-    (
-      left: 45
-    ),
-    (
-      left: 65
-    )
-  )
-);
+    )),
+  md: ((left: 25),
+    (left: 55)),
+  lg: ((left: 35),
+    (left: 45)),
+  xl: ((left: 45),
+    (left: 65)));
 $app-landing-2-shapes-count: length($app-landing-2-shapes-map);
 
 $app-landing-2--ring-1-width: 4px;
@@ -232,7 +197,7 @@ $hiw-circle-bg-color: linear-gradient(to bottom, $gray-200, $gray-100);
 $hiw-ring-bg-color: $color-primary;
 
 // Technology Stack
-$ts-circle-bg-color: linear-gradient(to bottom, $color-1, $color-1-light);
+$ts-circle-bg-color: linear-gradient(to bottom, #1b78e2, #3272bb);
 
 // Extending Core
 $ec-circle-bg-color: linear-gradient(to bottom, $gray-200, $gray-100);
