@@ -6,12 +6,6 @@
 
         <p>
           Sensai, is part of Learn and Skill Up
-          <br><br>
-          enroll@learnandskillup.com <br> <br>
-          Mailing Address: 11/272, Geeta Colony, New Delhi, 110031 <br><br>
-          +91 991-010-8642
-          <!-- <a href="mailto:enroll@learnandskillup.com"><button class="btn btn-primary">Send us an email</button></a> -->
-
         </p>
       </div>
 
@@ -19,9 +13,9 @@
         <h6 class="py-2 bold">Company</h6>
 
         <nav class="nav flex-column">
-          <a class="nav-item py-2" [routerLink]="['/team']">About Us</a>
-          <a class="nav-item py-2" href="['/']">Courses</a>
-          <a class="nav-item py-2" [routerLink]="['/']">Blog</a>
+          <a class="nav-item py-2" (click)="scrollToElement('about')">About Us</a>
+          <a class="nav-item py-2" (click)="scrollToElement('courses')">Courses</a>
+          <!-- <a class="nav-item py-2" [routerLink]="['/']">Blog</a> -->
         </nav>
       </div>
 
@@ -29,13 +23,13 @@
         <h6 class="py-2 bold">Team</h6>
 
         <nav class="nav flex-column">
-          <a class="nav-item py-2" [routerLink]="['/team']">Mentors</a>
-          <a class="nav-item py-2" [routerLink]="['/team']">Founder</a>
-          <a class="nav-item py-2" [routerLink]="['/team']">Our Team</a>
+          <a class="nav-item py-2" (click)="scrollToElement('mentors','team')">Mentors</a>
+          <a class="nav-item py-2" (click)="scrollToElement('founder','team')">Founder</a>
+          <a class="nav-item py-2" (click)="scrollToElement('team','team')">Our Team</a>
         </nav>
       </div>
 
-      <div class="col-md-2">
+      <!-- <div class="col-md-2">
         <h6 class="py-2 bold">Channels</h6>
 
         <nav class="nav flex-column">
@@ -43,7 +37,7 @@
           <a class="nav-item py-2" [routerLink]="['/']">Contact Us</a>
           <a class="nav-item py-2" [routerLink]="['/']">Follow Us</a>
         </nav>
-      </div>
+      </div> -->
     </div>
 
     <hr class="mt-5" />
@@ -53,19 +47,16 @@
         </p>
       </div>
 
-      <!-- <div class="col-md-8">
+      <div class="col-md-8">
         <nav class="nav justify-content-center justify-content-md-end">
           <a href="#" class="btn btn-circle btn-sm btn-secondary mr-3 op-4">
             <fa-icon [icon]="fa.faFacebook"></fa-icon>
-          </a>
-          <a href="#" class="btn btn-circle btn-sm btn-secondary mr-3 op-4">
-            <fa-icon [icon]="fa.faTwitter"></fa-icon>
           </a>
           <a href="#" class="btn btn-circle btn-sm btn-secondary op-4">
             <fa-icon [icon]="fa.faInstagram"></fa-icon>
           </a>
         </nav>
-      </div> -->
+      </div>
     </div>
   </div>
 </footer>
