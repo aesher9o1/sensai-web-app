@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -19,19 +21,23 @@ export class MainComponent implements OnInit {
   signInAlt = faSignInAlt;
   userPlus = faUserPlus;
 
-  constructor() {}
+  constructor(
+    private scrollToService: ScrollToService,
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
   isRightPositioned() {
     return this.position === 'right';
   }
-  scrollToElement($element): void {
-    console.log($element);
-    $element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
+  scrollToElement(target: string, page: string = ''): void {
+    this.router.navigate([`/${page}`]).then(() => {
+      setTimeout(() => {
+        this.scrollToService.scrollTo({
+          target,
+        });
+      }, 0);
     });
   }
 }

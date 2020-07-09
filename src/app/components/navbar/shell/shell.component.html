@@ -7,7 +7,7 @@
       <span class="icon-bar"></span>
     </button>
 
-    <a href="#main" class="navbar-brand">
+    <a [routerLink]="['']" class="navbar-brand">
       <img src="assets/img/logo.png" alt="Dashcore" class="logo logo-sticky" *ngIf="useOnlyDarkLogo; else logos" />
       <ng-template #logos>
         <img src="assets/img/logo.png" alt="Dashcore" class="logo logo-sticky d-block d-md-none" />
@@ -17,7 +17,7 @@
 
     <div class="collapse navbar-collapse ml-auto">
       <div class="sidebar-brand">
-        <a href="#main">
+        <a [routerLink]="['']">
           <img src="assets/img/logo.png" alt="Dashcore Template" class="logo" />
         </a>
       </div>

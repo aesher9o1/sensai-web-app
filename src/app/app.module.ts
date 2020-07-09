@@ -64,17 +64,7 @@ import {
   Bell,
 } from 'angular-feather/icons';
 import { SwiperModule } from 'ngx-swiper-wrapper';
-import { HeaderComponent } from './pages/home/header/header.component';
-import { BubblesComponent } from './pages/home/bubbles/bubbles.component';
-import { BubblesMainComponent } from './pages/home/bubbles-main/bubbles-main.component';
-import { HowItWorksComponent } from './pages/home/how-it-works/how-it-works.component';
-import { LeadingCoursesComponent } from './pages/home/leading-courses/leading-courses.component';
-import { SkilledWarriorComponent } from './pages/home/skilled-warrior/skilled-warrior.component';
-import { TestimonialsComponent } from './pages/home/testimonials/testimonials.component';
-import { CtaComponent } from './pages/home/cta/cta.component';
-import { CoursesWeTeachComponent } from './pages/home/courses-we-teach/courses-we-teach.component';
-import { HomeComponent } from './pages/home/home/home.component';
-import { MentorsComponent } from './pages/team/mentors/mentors.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 // Select some icons (use an object, not an array)
 const icons = {
@@ -139,6 +129,7 @@ const icons = {
     FeatherModule.pick(icons),
     FontAwesomeModule,
     SwiperModule,
+    ScrollToModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
