@@ -38,6 +38,13 @@ export class TestimonialsComponent implements OnInit {
       designation: ' Class 11, Our Student',
       image: 'aryan',
     },
+    {
+      name: 'Aditya Harsh',
+      description:
+        'My mentor was really sincere and very thorough with his concepts. Proper one to one interaction with great tutoring attitude. It actually helped me to Learn and Skill Up. Worth it.',
+      designation: ' B. Tech Graduate, Our Student',
+      image: 'aditya',
+    },
   ];
 
   constructor() {}

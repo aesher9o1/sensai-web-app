@@ -2,9 +2,9 @@
   <ul class="nav navbar-nav" [class.ml-auto]="true">
     <li class="nav-item"><a class="nav-link" [routerLink]="['/']">Home</a></li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/team']">Team</a>
+      <a class="nav-link" (click)="scrollToElement('mentors', 'team')">Team</a>
     </li>
-    <li class="nav-item">
+    <li class=" nav-item">
       <a class="nav-link" (click)="scrollToElement('about')">About Us</a>
     </li>
   </ul>

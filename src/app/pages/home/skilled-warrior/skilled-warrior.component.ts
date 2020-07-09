@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-skilled-warrior',
@@ -16,7 +18,19 @@ export class SkilledWarriorComponent implements OnInit {
     { name: 'dropbox', size: 'icon-xl', position: { left: 95, top: 83 } },
   ];
 
-  constructor() {}
+  constructor(
+    private scrollToService: ScrollToService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
+  scrollToElement(target: string, page: string = ''): void {
+    this.router.navigate([`/${page}`]).then(() => {
+      setTimeout(() => {
+        this.scrollToService.scrollTo({
+          target,
+        });
+      }, 0);
+    });
+  }
 }
