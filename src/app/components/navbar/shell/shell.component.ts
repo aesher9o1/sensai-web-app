@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
+import { Router } from '@angular/router';
+
 const STICKY_POINT = 90;
 
 @Component({
@@ -27,11 +30,23 @@ export class ShellComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  constructor(
+    private scrollToService: ScrollToService,
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
   toggleNavbar() {
     this.navbarExpanded = !this.navbarExpanded;
+  }
+  viewCourses() {
+    this.router.navigate([`/`]).then(() => {
+      setTimeout(() => {
+        this.scrollToService.scrollTo({
+          target: 'courses',
+        });
+      }, 0);
+    });
   }
 }

@@ -1,0 +1,7 @@
+.btn-rounded {
+  display: none;
+
+  @media only screen and (max-width: 765px) {
+    display: block;
+  }
+}
