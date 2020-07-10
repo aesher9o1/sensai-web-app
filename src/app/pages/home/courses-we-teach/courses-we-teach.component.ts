@@ -18,6 +18,7 @@ export class CoursesWeTeachComponent implements OnInit {
       animation: 'fade-up',
       link:
         'https://docs.google.com/document/d/1lW-KPVEzdwzKQ7089mJSq-IGrsSCqZHTFkV2cYMtqxE/edit?usp=sharing',
+      payment: 'le0feb73e98e84e5b94d85c9435569edc',
     },
     {
       img: '1',
@@ -29,6 +30,7 @@ export class CoursesWeTeachComponent implements OnInit {
       animation: 'fade-up',
       link:
         'https://docs.google.com/document/d/1npmJzSPOnbJdRDCPnV3g_vIvKRXEwBkU-dbv0dPIBnI/edit?usp=sharing',
+      payment: '',
     },
     {
       img: '3',
@@ -40,6 +42,7 @@ export class CoursesWeTeachComponent implements OnInit {
       animation: 'fade-up',
       link:
         'https://docs.google.com/document/d/1Wl0WijUIrizaJ5aYGNefkK_Ywu9r6qsI_w2FUpb8WnU/edit?usp=sharing',
+      payment: '',
     },
     {
       img: '4',
@@ -51,6 +54,7 @@ export class CoursesWeTeachComponent implements OnInit {
       animation: 'fade-up',
       link:
         'https://docs.google.com/document/d/1g6QocKdTK6O5OXcyJcEGz7uZmLOGOzZUuYK7695FY6w/edit?usp=sharing',
+      payment: '',
     },
   ];
   longAarrowAltRight = faLongArrowAltRight;

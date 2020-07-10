@@ -41,12 +41,6 @@ export class ShellComponent implements OnInit {
     this.navbarExpanded = !this.navbarExpanded;
   }
   viewCourses() {
-    this.router.navigate([`/`]).then(() => {
-      setTimeout(() => {
-        this.scrollToService.scrollTo({
-          target: 'courses',
-        });
-      }, 0);
-    });
+    this.router.navigate([`/team`]);
   }
 }

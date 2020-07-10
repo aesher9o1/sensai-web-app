@@ -17,7 +17,7 @@ export class CoreComponent implements OnInit {
     {
       gravity: 'north',
       title: 'Priya Arora',
-      description: 'Finance at Delhivery, Research Analyst at Benori',
+      description: 'Worked at Delhivery & Benori before',
       image: 'url(assets/img/team/priya.jpg)',
     },
     {

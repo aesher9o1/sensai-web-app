@@ -63,6 +63,13 @@ export class MentorsComponent implements OnInit {
         '2+ years in IoT, has been working with different companies for Design and IoT like The Blog Event.',
       image: 'url(assets/img/mentors/tarush.jpg)',
     },
+    {
+      gravity: 'north',
+      title: 'Mahainn Somani',
+      description:
+        '2+ years in C++, An MUN enthusiast, won best delegate awards. Worked at Abyeti Tech and Urban Campus.',
+      image: 'url(assets/img/mentors/mahainn.jpg)',
+    },
   ];
 
   constructor() {}

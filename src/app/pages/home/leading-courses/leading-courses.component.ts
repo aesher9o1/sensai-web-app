@@ -28,7 +28,7 @@ export class LeadingCoursesComponent implements OnInit {
     {
       icon: 'url(assets/img/mentors/tanya.jpg)',
       title: 'Tanya Agarwal',
-      description: 'Enterprise Solution Specialist, General Electronics',
+      description: 'Enterprise Solution Specialist, General Electric',
     },
     {
       icon: 'url(assets/img/mentors/tanuj.jpg)',

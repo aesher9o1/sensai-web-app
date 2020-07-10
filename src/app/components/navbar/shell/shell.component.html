@@ -2,8 +2,7 @@
   [ngClass]="{ 'navbar-expanded': navbarExpanded, 'navbar-sticky': navbarSticky, 'dark-link': darkLinks }">
   <div class="container">
     <button class="btn btn-rounded btn-solid px-3" type="button" (click)="viewCourses()">
-      View Courses
-    </button>
+      Our Team </button>
 
     <a [routerLink]="['']" class="navbar-brand">
       <img src="assets/img/logo.png" alt="Dashcore" class="logo logo-sticky" *ngIf="useOnlyDarkLogo; else logos" />
