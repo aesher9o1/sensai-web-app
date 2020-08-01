@@ -1,0 +1,63 @@
+<footer class="site-footer section">
+  <div class="container pb-3">
+    <div class="row gap-y text-center text-md-left">
+      <div class="col-md-4 mr-auto">
+        <img src="assets/img/logo.png" alt="" class="logo" />
+
+        <p>
+          Sensai, is part of Learn and Skill Up
+        </p>
+      </div>
+
+      <div class="col-md-2">
+        <h6 class="py-2 bold">Company</h6>
+
+        <nav class="nav flex-column">
+          <a class="nav-item py-2" (click)="scrollToElement('about')">About Us</a>
+          <a class="nav-item py-2" (click)="scrollToElement('courses')">Courses</a>
+          <!-- <a class="nav-item py-2" [routerLink]="['/']">Blog</a> -->
+        </nav>
+      </div>
+
+      <div class="col-md-2">
+        <h6 class="py-2 bold">Team</h6>
+
+        <nav class="nav flex-column">
+          <a class="nav-item py-2" (click)="scrollToElement('mentors','team')">Mentors</a>
+          <a class="nav-item py-2" (click)="scrollToElement('founder','team')">Founder</a>
+          <a class="nav-item py-2" (click)="scrollToElement('team','team')">Our Team</a>
+        </nav>
+      </div>
+
+      <!-- <div class="col-md-2">
+        <h6 class="py-2 bold">Channels</h6>
+
+        <nav class="nav flex-column">
+          <a class="nav-item py-2" [routerLink]="['/']">Our Advisors</a>
+          <a class="nav-item py-2" [routerLink]="['/']">Contact Us</a>
+          <a class="nav-item py-2" [routerLink]="['/']">Follow Us</a>
+        </nav>
+      </div> -->
+    </div>
+
+    <hr class="mt-5" />
+    <div class="row small align-items-center">
+      <div class="col-md-4">
+        <p class="mt-2 mb-md-0 text-secondary text-center text-md-left">© 2020 Learn and Skill Up. All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="col-md-8">
+        <nav class="nav justify-content-center justify-content-md-end">
+          <a href="https://www.facebook.com/Learn-And-Skill-Up-101841128232048"
+            class="btn btn-circle btn-sm btn-secondary mr-3 op-4">
+            <fa-icon [icon]="fa.faFacebook"></fa-icon>
+          </a>
+          <a href="https://instagram.com/learnandskillup" class="btn btn-circle btn-sm btn-secondary op-4">
+            <fa-icon [icon]="fa.faInstagram"></fa-icon>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>

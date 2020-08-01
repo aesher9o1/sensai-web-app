@@ -1,0 +1,107 @@
+<section class="section mt-5n" id="contact">
+  <div class="container bring-to-front pt-0">
+    <div class="row align-items-center gap-y">
+      <div class="col-md-6">
+        <div class="shadow bg-contrast p-4 rounded">
+          <form class="form form-contact" name="form-contact" data-response-message-animation="slide-in-up"
+            [formGroup]="contactForm">
+            <div class="form-group">
+              <label for="name" class="bold">Name</label>
+              <input type="text" name="name" id="name" class="form-control bg-contrast" placeholder="Name" required
+                formControlName="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact_email" class="bold mb-0">Email address</label>
+              <small id="emailHelp" class="form-text text-secondary mt-0 mb-2 italic">We'll never share your email with
+                anyone
+                else.</small>
+              <input type="email" name="email" id="email" class="form-control bg-contrast" placeholder="Email"
+                formControlName="email" required />
+            </div>
+            <div class="form-group">
+              <label for="contact_number" class="bold">Contact Number</label>
+              <input type="tel" name="phone" id="phone" class="form-control bg-contrast" formControlName="phone"
+                placeholder="Contact" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact_email" class="bold">Subject</label>
+              <select formControlName="topic" class="form-control bg-contrast">
+                <option value="" selected class="d-none">Choose a topic</option>
+                <option value="python">Python Programming</option>
+                <option value="c-plus-plus">C++ Programming</option>
+                <option value="IoT">IoT/Robotics</option>
+                <option value="solidworks">SolidWorks</option>
+                <option value="others">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact_email" class="bold">Message</label>
+              <textarea name="message" id="contact_message" class="form-control bg-contrast" formControlName="message"
+                placeholder="Something you want us to know?" rows="8" required></textarea>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <small [class]="message.class">{{message.message}}</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button id="contact-submit" name="submit" type="submit" class="btn btn-primary btn-rounded"
+                (click)="submitForm()">
+                Schedule a call
+              </button>
+            </div>
+          </form>
+
+          <div class=" response-message">
+            <div class="section-heading">
+              <i class="fas fa-check font-lg"></i>
+              <p class="font-md m-0">Thank you!</p>
+              <p class="response">Your message has been send, we will contact you as soon as possible.</p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="col-md-5 ml-md-auto">
+        <div class="section-heading">
+          <!-- <dc-badge [bg]="'info'" [text]="'contrast'" [small]>Let's do business</dc-badge> -->
+          <h2>Connect with us</h2>
+        </div>
+
+        <div class="media">
+          <fa-icon [icon]="fa.mapMarker" [class]="'font-l text-primary mr-3'"></fa-icon>
+          <div class="media-body">11/272, Geeta Colony, 110031<span class="d-block">New Delhi, India</span></div>
+        </div>
+
+        <div class="media my-4">
+          <fa-icon [icon]="fa.phone" [class]="'font-l text-primary mr-3'"></fa-icon>
+          <div class="media-body">
+            <span class="d-block"><a href="tel:+91 991-010-8642">+91 991-010-8642</a></span>
+          </div>
+        </div>
+
+        <div class="media">
+          <fa-icon [icon]="fa.envelope" [class]="'font-l text-primary mr-3'"></fa-icon>
+          <div class="media-body"><a href="mailto:enroll@learnandskillup.com">enroll@learnandskillup.com</a></div>
+        </div>
+
+        <hr class="my-4" />
+
+        <nav class="nav justify-content-center justify-content-md-start">
+          <a href="https://www.facebook.com/Learn-And-Skill-Up-101841128232048" class="mr-5">
+            <fa-icon [icon]="fa.facebook" size="3x"></fa-icon>
+          </a>
+          <a href="https://instagram.com/learnandskillup" class="">
+            <fa-icon [icon]="fa.instagram" size="3x"></fa-icon>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>

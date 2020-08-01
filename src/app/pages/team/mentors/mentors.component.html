@@ -1,0 +1,61 @@
+<!-- lightbox -->
+<section class="section bg-color edge top-left" id="mentors">
+  <div class="container pt-8">
+    <div class="section-heading text-center w-75 mx-auto">
+      <h2 class="text-contrast bold">Meet our Mentors
+      </h2>
+      <p class="lead text-contrast">
+
+      </p>
+    </div>
+
+    <div class="row gap-y">
+      <div class="col-12 col-sm-6 col-md-4" *ngFor="let post of posts">
+        <div class="card shadow-box shadow-hover border-0">
+          <div class="gradient gradient-blue-purple alpha-3 p-6 cover center-flex" [style.background-image]="post.image"
+            style="height: 100px;"></div>
+          <div class="card-body">
+            <h4 class="card-title regular">{{ post.title }}</h4>
+
+            <p class="card-text text-secondary">{{ post.description }}.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container mt-4" id="aboutus">
+  <div class="row">
+    <div class="col-md-10 mx-auto text-center mt-2">
+      <h1 class="bold">About us</h1>
+    </div>
+  </div>
+  <a name="aboutus"></a>
+  <div class="row">
+    <div class="container">
+      <div class="col-md-10 mx-auto text-left">
+        <p>Learn and Skill Up is an initiative to make learning an approachable and personalized concept for every
+          student. The idea is grown from the personal experience of a student who started coding early in life and
+          never looked back, winning accolades and laurels ever since, who wants to share his learning and wants to
+          reform the education pattern of the country.
+          <br>
+          <br>
+          Our experienced mentors don’t only want to teach the theory taught in schools, we want to create skilled
+          individuals with practical exercises and industry knowledge. The courses here are a continuous mentorship
+          program with an interactive and comfortable environment.
+          <br>
+          <br>
+
+          After completing these courses with us, you’ll always feel one step ahead of your peers and the curriculum
+          easy to understand. These courses will help you explore your talents and refine your skills. If you skill up
+          early in life, you’ll be more confident and self-assured at every step ahead, and will be able to find your
+          true interests and channel your knowledge to innovate.
+          <br>
+          <br>
+
+          Our live online classes provide a personalized learning platform to all students with batch size never
+          exceeding over 5 students so that each learner gets equal attention and opportunities. </p>
+      </div>
+    </div>
+  </div>
+</div>

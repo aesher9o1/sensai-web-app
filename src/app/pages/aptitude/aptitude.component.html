@@ -1,0 +1,41 @@
+<main class="position-relative overflow-hidden">
+  <section
+    class="section extending-core"
+    *ngIf="!isQuizShow && !isQuizSubmitted"
+  >
+    <div class="container">
+      <input type="number" placeholder="Number" [(ngModel)]="userKey" />
+      <button (click)="startQuiz()">Save number</button>
+    </div>
+  </section>
+
+  <section
+    class="section extending-core"
+    *ngIf="isQuizShow && !isQuizSubmitted"
+  >
+    <div class="container" *ngFor="let section of questions">
+      <div *ngFor="let question of section.questions">
+        <p>{{ question.value }}</p>
+        <span *ngFor="let option of question.options; let i = index">
+          <input
+            type="radio"
+            style="margin-right: 0.5em;"
+            [id]="option.value"
+            [name]="question.value"
+            [value]="option.value"
+            (change)="selectQuestion(section.key, i, option)"
+          />
+          <label>{{ option.value }}</label
+          ><br />
+        </span>
+        <br />
+      </div>
+    </div>
+  </section>
+
+  <section class="section extending-core" *ngIf="isQuizSubmitted">
+    <div class="container">
+      <h1>Thankyou</h1>
+    </div>
+  </section>
+</main>

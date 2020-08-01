@@ -1,0 +1,47 @@
+<section class="section" id="courses">
+  <div class="shape-wrapper">
+    <img src="assets/img/shps/shape-2.svg" class="shape-right" alt="..." />
+  </div>
+
+  <div class="container bring-to-front">
+    <div class="row gap-y align-items-center">
+      <div class="col-12 col-md-5 col-lg-5 mr-md-auto text-center text-lg-left">
+        <i-feather name="box" class="wh36 stroke-primary"></i-feather>
+        <p class="small text-primary bold">Technical or Non-Technical, Coding skills are must</p>
+        <h2 class="bold">Courses to Boost your Career</h2>
+        <p class="text-secondary">
+          Join us now and experience revolutionised learning. Follow your passion, learn from experienced mentors,
+          choose your calling from a selection of well-designed courses and start your journey today
+        </p>
+      </div>
+
+      <div class="col-12 col-md-7 col-lg-6">
+        <div class="row gap-y">
+          <div class="col-6 col-sm-5 col-md-6 col-lg-5 {{ card.class }}" *ngFor="let card of cards">
+            <div class="rounded text-contrast p-2 p-sm-4 shadow text-center" [style.background-color]="card.bg"
+              [attr.data-aos]="card.animation">
+              <!-- <img [src]="'assets/img/logos/' + card.img + '.svg'" class="img-responsive op-8 px-0 px-sm-4" alt="..." /> -->
+
+              <p class="bold mt-5">{{ card.title }}</p>
+
+              <p class="op-5 small">{{ card.description }}</p>
+
+              <a href="{{ card.link }}" class="btn btn-rounded btn-contrast mt-4" target="_blank">
+                <fa-icon [icon]="longAarrowAltRight" class="d-inline-block d-sm-none"></fa-icon>
+                <span class="d-none d-sm-inline-block">Read More</span>
+              </a>
+              <!-- <a href="https://www.instamojo.com/@learnandskillup/{{card.payment}}" rel="im-checkout"
+                class="btn btn-rounded btn-contrast mt-4" data-text="Register Now"
+                data-css-style="color:#ffffff; background:#75c26a; width:180px; border-radius:4px"
+                data-layout="vertical">
+                <fa-icon [icon]="longAarrowAltRight" class="d-inline-block d-sm-none"></fa-icon>
+                <span class="d-none d-sm-inline-block">Register Now</span>
+              </a> -->
+              <script src="https://js.instamojo.com/v1/button.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
