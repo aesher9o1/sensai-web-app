@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home/home.component';
 import { MentorsComponent } from './pages/team/mentors/mentors.component';
 import { importExpr } from '@angular/compiler/src/output/output_ast';
+import { AptitudeComponent } from './pages/aptitude/aptitude.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
     path: 'team',
     loadChildren: () =>
       import('./pages/team/team.module').then((m) => m.TeamModule),
+  },
+  {
+    path: 'aptitude',
+    component: AptitudeComponent,
   },
 ];
 

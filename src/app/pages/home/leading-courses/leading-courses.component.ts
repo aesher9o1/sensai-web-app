@@ -33,7 +33,7 @@ export class LeadingCoursesComponent implements OnInit {
     {
       icon: 'url(assets/img/mentors/tanuj.jpg)',
       title: 'Tanuj Sahal',
-      description: 'Upcoming Software Engineer at Microsoft',
+      description: 'Application Development Consultant, Microsoft',
     },
   ];
 

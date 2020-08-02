@@ -65,6 +65,8 @@ import {
 } from 'angular-feather/icons';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { AptitudeComponent } from './pages/aptitude/aptitude.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Select some icons (use an object, not an array)
 const icons = {
@@ -122,7 +124,13 @@ const icons = {
 };
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, ShellComponent, MainComponent],
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    ShellComponent,
+    MainComponent,
+    AptitudeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -130,6 +138,8 @@ const icons = {
     FontAwesomeModule,
     SwiperModule,
     ScrollToModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
