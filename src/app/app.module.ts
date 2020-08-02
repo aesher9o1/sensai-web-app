@@ -67,6 +67,8 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { AptitudeComponent } from './pages/aptitude/aptitude.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 // Select some icons (use an object, not an array)
 const icons = {
@@ -122,6 +124,7 @@ const icons = {
   Repeat,
   Bell,
 };
+import { CountdownModule } from 'ngx-countdown';
 
 @NgModule({
   declarations: [
@@ -140,6 +143,8 @@ const icons = {
     ScrollToModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    CountdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
