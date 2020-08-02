@@ -13,9 +13,16 @@
     class="section extending-core"
     *ngIf="isQuizShow && !isQuizSubmitted"
   >
-    <div class="container" *ngFor="let section of questions">
+    <div class="container mb-n5 border-bottom" style="padding-bottom: 0;">
+      <div class="row">
+        <h5>
+          The quiz will auto submit at: {{ quizEndTime | date: "mediumTime" }}
+        </h5>
+      </div>
+    </div>
+    <div class="container mt-n5" *ngFor="let section of questions">
       <div *ngFor="let question of section.questions">
-        <p>{{ question.value }}</p>
+        <p [innerHtml]="question.value"></p>
         <span *ngFor="let option of question.options; let i = index">
           <input
             type="radio"
@@ -30,6 +37,9 @@
         </span>
         <br />
       </div>
+    </div>
+    <div class="container mt-n5">
+      <button (click)="submitQuiz()">Submit Quiz</button>
     </div>
   </section>
 

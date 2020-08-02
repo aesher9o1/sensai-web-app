@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import QuestionHelper from './questions';
 import { Options } from './models/Questions';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector: 'app-aptitude',
@@ -13,12 +14,11 @@ export class AptitudeComponent implements OnInit {
   isQuizSubmitted = false;
   answered: Record<string, boolean> = {};
   questionHelper = QuestionHelper.getInstance();
+  quizEndTime: Date;
 
   questions = [];
 
-  constructor() {
-    setTimeout(() => this.submitQuiz(), 900000);
-
+  constructor(private af: AngularFireDatabase) {
     this.questions.push({
       key: 'quants',
       questions: this.questionHelper.getQuants(),
@@ -44,18 +44,25 @@ export class AptitudeComponent implements OnInit {
 
   startQuiz() {
     if (!this.userKey) return;
-    console.log(this.userKey);
     this.isQuizShow = true;
+    const getEndTimeInMinutes = 15 * 60000;
+
+    setTimeout(() => this.submitQuiz(), getEndTimeInMinutes);
+    this.quizEndTime = new Date(new Date().getTime() + getEndTimeInMinutes);
   }
 
   selectQuestion(sectionID: string, index: number, selectedOption: Options) {
     if (selectedOption.isCorrect) this.answered[`${sectionID}-${index}`] = true;
-
-    console.log(selectedOption);
-    console.log(this.answered);
   }
 
   submitQuiz() {
     this.isQuizSubmitted = true;
+    this.af.database
+      .ref('aptitude')
+      .child(this.userKey.toString())
+      .push({
+        score: Object.keys(this.answered).length,
+        answers: this.answered,
+      });
   }
 }
