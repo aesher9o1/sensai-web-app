@@ -38,6 +38,11 @@ export class AptitudeComponent implements OnInit {
       key: 'verbal',
       questions: this.questionHelper.getVerbal(),
     });
+
+    this.questions.push({
+      key: 'data-interpretaion',
+      questions: this.questionHelper.getDI(),
+    });
   }
 
   ngOnInit(): void {}

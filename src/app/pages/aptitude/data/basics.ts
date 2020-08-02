@@ -1,6 +1,6 @@
 import { Question } from '../models/Questions';
 
-const Bacis: Question[] = [
+const Basics: Question[] = [
   {
     value: 'The list of coded instructions is called',
     options: [
@@ -184,4 +184,4 @@ const Bacis: Question[] = [
   },
 ];
 
-export default Bacis;
+export default Basics;

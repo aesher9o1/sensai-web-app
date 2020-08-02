@@ -2,6 +2,7 @@ import Quants from './data/quants';
 import Logical from './data/logical';
 import BasicComputer from './data/basics';
 import Verbal from './data/verbal';
+import DataInterpretation from './data/di';
 import { Question } from './models/Questions';
 
 class QuestionHelper {
@@ -58,6 +59,14 @@ class QuestionHelper {
 
   public getVerbal() {
     const shuffledQuants = this.shuffleQuestion(Verbal);
+
+    if (shuffledQuants.length > 5)
+      return shuffledQuants.slice(0, this.QUESTIONS_PER_SECTION);
+    return shuffledQuants;
+  }
+
+  public getDI() {
+    const shuffledQuants = this.shuffleQuestion(DataInterpretation);
 
     if (shuffledQuants.length > 5)
       return shuffledQuants.slice(0, this.QUESTIONS_PER_SECTION);
