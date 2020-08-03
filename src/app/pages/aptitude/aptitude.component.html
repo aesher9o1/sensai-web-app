@@ -63,7 +63,7 @@
             </button>
           </div>
           <div class="row mt-2">
-            <p>Not ready to give this right now? Give it later!</p>
+            <p>{{ formText }}</p>
             <button class="btn btn-warning" (click)="startQuiz()">
               Register For Later!
             </button>
@@ -84,6 +84,7 @@
           <countdown
             #cd
             [config]="{ leftTime: 1200, format: 'mm:ss' }"
+            class="countdown"
             style="position: fixed; z-index: 99 !important; float: right;"
           ></countdown>
         </div>
