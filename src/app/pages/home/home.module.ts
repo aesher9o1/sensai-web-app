@@ -69,6 +69,7 @@ import {
   ArrowRight,
   Repeat,
   Bell,
+  HelpCircle,
 } from 'angular-feather/icons';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -128,6 +129,7 @@ const icons = {
   ArrowRight,
   Repeat,
   Bell,
+  HelpCircle,
 };
 
 @NgModule({

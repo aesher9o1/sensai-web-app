@@ -10,20 +10,17 @@ export class HowItWorksComponent implements OnInit {
     {
       icon: 'plan',
       title: 'Personalised Courses',
-      description:
-        'Curriculum created with love by our experienced industrial experts for the smooth learning experience/',
+      description: '',
     },
     {
       icon: 'payment',
       title: 'Interactive Learning ',
-      description:
-        'With batch sizes of only five students, we aim to encourage one on one interactions for better understanding of the students, with more focus on hands on experience.',
+      description: '',
     },
     {
       icon: 'work',
       title: 'Experienced Mentors',
-      description:
-        'Our mentors are experienced in their respective domains with vast knowledge and industrial experience.',
+      description: '',
     },
   ];
   constructor() {}

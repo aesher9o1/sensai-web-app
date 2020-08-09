@@ -43,4 +43,14 @@ export class ShellComponent implements OnInit {
   viewCourses() {
     this.router.navigate([`/team`]);
   }
+
+  scrollToElement(target: string, page: string = ''): void {
+    this.router.navigate([`/${page}`]).then(() => {
+      setTimeout(() => {
+        this.scrollToService.scrollTo({
+          target,
+        });
+      }, 0);
+    });
+  }
 }

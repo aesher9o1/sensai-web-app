@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-md navigation sidebar-left fixed-top"
   [ngClass]="{ 'navbar-expanded': navbarExpanded, 'navbar-sticky': navbarSticky, 'dark-link': darkLinks }">
   <div class="container">
-    <button class="btn btn-rounded btn-solid px-3" type="button" (click)="viewCourses()">
-      Our Team </button>
+
 
     <a [routerLink]="['']" class="navbar-brand">
       <img src="assets/img/logo.png" alt="Dashcore" class="logo logo-sticky" *ngIf="useOnlyDarkLogo; else logos" />
@@ -11,6 +10,15 @@
         <img src="assets/img/logo.png" alt="Dashcore" class="logo d-none d-md-block" />
       </ng-template>
     </a>
+    <ul style="list-style-type: none; margin-bottom: 0!important;">
+      <li><button class="btn btn-rounded btn-solid px-3 mt-2" type="button" (click)="viewCourses()">
+          About Us</button></li>
+      <li><button class="btn btn-rounded btn-solid px-3 mt-2" type="button" (click)="scrollToElement('contact')"
+          style="background-color: #428BFC; border: none; float: right; margin-bottom: 0!important;">
+          Free Demo Class</button></li>
+    </ul>
+
+
 
     <div class="collapse navbar-collapse ml-auto">
       <div class="sidebar-brand">
