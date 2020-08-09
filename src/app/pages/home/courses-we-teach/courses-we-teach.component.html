@@ -3,9 +3,11 @@
     <img src="assets/img/shps/shape-2.svg" class="shape-right" alt="..." />
   </div>
 
-  <div class="container bring-to-front">
-    <div class="row gap-y align-items-center">
-      <div class="col-12 col-md-5 col-lg-5 mr-md-auto text-center text-lg-left">
+  <div
+    class="container bring-to-front"
+    style="padding-bottom: 0 !important; margin-bottom: 0 !important;"
+  >
+    <!-- <div class="col-12 col-md-5 col-lg-5 mr-md-auto text-center text-lg-left">
         <i-feather name="box" class="wh36 stroke-primary"></i-feather>
         <p class="small text-primary bold">Technical or Non-Technical, Coding skills are must</p>
         <h2 class="bold">Courses to Boost your Career</h2>
@@ -13,34 +15,192 @@
           Join us now and experience revolutionised learning. Follow your passion, learn from experienced mentors,
           choose your calling from a selection of well-designed courses and start your journey today
         </p>
-      </div>
+      </div> -->
+    <div
+      class="tabs"
+      style="margin-bottom: 0 !important; padding-bottom: 0 !important;"
+    >
+      <input
+        type="radio"
+        id="tab1"
+        (click)="clickOnBeginner()"
+        name="tab-control"
+        checked
+      />
+      <input
+        type="radio"
+        id="tab2"
+        (click)="clickOnIntermediate()"
+        name="tab-control"
+      />
+      <input
+        type="radio"
+        id="tab3"
+        (click)="clickOnSpec()"
+        name="tab-control"
+      />
+      <ul>
+        <li title="Features">
+          <label for="tab1" role="button">Beginner<br /><span></span></label>
+        </li>
+        <li title="Delivery Contents">
+          <label for="tab2" role="button"
+            >Intermediate<br /><span></span
+          ></label>
+        </li>
+        <li title="Shipping">
+          <label for="tab3" role="button"
+            >Specialisation<br /><span></span
+          ></label>
+        </li>
+      </ul>
 
-      <div class="col-12 col-md-7 col-lg-6">
-        <div class="row gap-y">
-          <div class="col-6 col-sm-5 col-md-6 col-lg-5 {{ card.class }}" *ngFor="let card of cards">
-            <div class="rounded text-contrast p-2 p-sm-4 shadow text-center" [style.background-color]="card.bg"
-              [attr.data-aos]="card.animation">
-              <!-- <img [src]="'assets/img/logos/' + card.img + '.svg'" class="img-responsive op-8 px-0 px-sm-4" alt="..." /> -->
+      <div class="slider"><div class="indicator"></div></div>
+    </div>
+    <div>
+      <div id="generic_price_table" *ngIf="beginnerShow">
+        <section>
+          <div class="container" style="padding-top: 0 !important ;">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let item of beginner">
+                <div class="generic_content clearfix hover-feature">
+                  <div class="generic_head_price clearfix">
+                    <div class="generic_head_content clearfix">
+                      <div class="pt-1 mb-1" style="color: white;">
+                        Beginner
+                      </div>
+                      <div class="head_bg"></div>
+                      <div class="head">
+                        <span>{{ item.name }}</span>
+                      </div>
+                    </div>
+                    <div class="generic_price_tag clearfix">
+                      <span class="price">
+                        <!-- <span class="sign">$</span> -->
+                        <!-- <span class="currency">21</span> -->
+                        <span class="cent" style="color: white;"
+                          >{{ item.lectures }} Lectures</span
+                        >
+                        <!-- <span class="month"> Classes</span> -->
+                      </span>
+                    </div>
+                  </div>
+                  <div class="generic_feature_list">
+                    <ul>
+                      <li *ngFor="let feat of item.features">
+                        <span>{{ feat }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="">
+                    <s>₹{{ item.beforePrice }}</s>
+                    <h5>₹{{ item.afterPrice }}</h5>
+                  </div>
 
-              <p class="bold mt-5">{{ card.title }}</p>
-
-              <p class="op-5 small">{{ card.description }}</p>
-
-              <a href="{{ card.link }}" class="btn btn-rounded btn-contrast mt-4" target="_blank">
-                <fa-icon [icon]="longAarrowAltRight" class="d-inline-block d-sm-none"></fa-icon>
-                <span class="d-none d-sm-inline-block">Read More</span>
-              </a>
-              <!-- <a href="https://www.instamojo.com/@learnandskillup/{{card.payment}}" rel="im-checkout"
-                class="btn btn-rounded btn-contrast mt-4" data-text="Register Now"
-                data-css-style="color:#ffffff; background:#75c26a; width:180px; border-radius:4px"
-                data-layout="vertical">
-                <fa-icon [icon]="longAarrowAltRight" class="d-inline-block d-sm-none"></fa-icon>
-                <span class="d-none d-sm-inline-block">Register Now</span>
-              </a> -->
-              <script src="https://js.instamojo.com/v1/button.js"></script>
+                  <div class="generic_price_btn clearfix">
+                    <a class="" href="">Free Demo Class</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+      </div>
+
+      <div id="generic_price_table" *ngIf="intermediateShow">
+        <section>
+          <div class="container" style="padding-top: 0 !important ;">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let item of intermediate">
+                <div class="generic_content clearfix hover-feature">
+                  <div class="generic_head_price clearfix">
+                    <div class="generic_head_content clearfix">
+                      <div class="pt-1 mb-1" style="color: white;">
+                        Intermediate
+                      </div>
+                      <div class="head_bg"></div>
+                      <div class="head">
+                        <span>{{ item.name }}</span>
+                      </div>
+                    </div>
+                    <div class="generic_price_tag clearfix">
+                      <span class="price">
+                        <!-- <span class="sign">$</span> -->
+                        <!-- <span class="currency">21</span> -->
+                        <span class="cent" style="color: white;"
+                          >{{ item.lectures }} Lectures</span
+                        >
+                        <!-- <span class="month"> Classes</span> -->
+                      </span>
+                    </div>
+                  </div>
+                  <div class="generic_feature_list">
+                    <ul>
+                      <li *ngFor="let feat of item.features">
+                        <span>{{ feat }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="">
+                    <s>₹{{ item.beforePrice }}</s>
+                    <h5>₹{{ item.afterPrice }}</h5>
+                  </div>
+                  <div class="generic_price_btn clearfix">
+                    <a class="" href="">Free Demo Class</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="generic_price_table" *ngIf="specialisationShow">
+        <section>
+          <div class="container" style="padding-top: 0 !important ;">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let item of special">
+                <div class="generic_content clearfix hover-feature">
+                  <div class="generic_head_price clearfix">
+                    <div class="generic_head_content clearfix">
+                      <div class="pt-1 mb-1" style="color: white;">
+                        Specialisation
+                      </div>
+                      <div class="head_bg"></div>
+                      <div class="head">
+                        <span>{{ item.name }}</span>
+                      </div>
+                    </div>
+                    <div class="generic_price_tag clearfix">
+                      <span class="price">
+                        <!-- <span class="sign">$</span> -->
+                        <!-- <span class="currency">21</span> -->
+                        <span class="cent" style="color: white;"
+                          >{{ item.lectures }} Lectures</span
+                        >
+                        <!-- <span class="month"> Classes</span> -->
+                      </span>
+                    </div>
+                  </div>
+                  <div class="generic_feature_list">
+                    <ul>
+                      <li *ngFor="let feat of item.features">
+                        <span>{{ feat }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="">
+                    <s>₹{{ item.beforePrice }}</s>
+                    <h5>₹{{ item.afterPrice }}</h5>
+                  </div>
+                  <div class="generic_price_btn clearfix">
+                    <a class="" href="">Free Demo Class</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>

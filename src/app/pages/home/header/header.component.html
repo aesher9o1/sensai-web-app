@@ -31,7 +31,7 @@
     <div class="static-shape background-shape-main"></div>
   </div>
 
-  <div class="container mt-5">
+  <div class="container mt-5" style="padding-bottom: 0!important;">
     <div class="row">
       <div class="col-md-10 mx-auto text-center">
         <h1 class="bold font-md font-md-lg">
@@ -46,7 +46,37 @@
         </a>
       </div>
     </div>
+    <section id="features" class="section how-it-works">
+
+
+      <div class="container" style="padding-bottom: 0!important;">
+        <div class="section-heading text-center">
+          <h2 class="bold">Why coding for students?</h2>
+          <p class="lead text-secondary">
+          </p>
+        </div>
+
+        <div class="row gap-y text-center text-md-left">
+          <div class="col-md-4 py-4 text-center" *ngFor="let element of elements">
+            <div class="shapes-figure shapes-container">
+              <div class="shape shape-circle center-x"></div>
+            </div>
+            <figure class="mockup mb-4" style="z-index: 22!important;">
+              <img [src]="'assets/img/integration/steps/' + element.icon + '.svg'" class="mb-3 image-responsive" />
+            </figure>
+
+            <h5 class="bold">{{ element.title }}</h5>
+            <p class="text-muted">{{ element.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
   </div>
 
-  <app-bubbles-main></app-bubbles-main>
+  <!-- <app-bubbles-main></app-bubbles-main> -->
+
+
 </header>
