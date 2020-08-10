@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
+import { emit } from 'process';
 
 @Component({
   selector: 'app-courses-we-teach',
@@ -17,8 +18,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Projects and Applications',
         'Industrial way of code',
       ],
-      beforePrice: '9,600',
-      afterPrice: '7,200',
+      beforePrice: 9600,
+      afterPrice: 7200,
     },
     {
       name: 'C++',
@@ -29,8 +30,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Projects and Applications',
         'Industrial way of code',
       ],
-      beforePrice: '9,600',
-      afterPrice: '7,200',
+      beforePrice: 9600,
+      afterPrice: 7200,
     },
     {
       name: 'IOT',
@@ -41,8 +42,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Create a bluetooth control car',
         'Hardware Kit included',
       ],
-      beforePrice: '9,600',
-      afterPrice: '7,200',
+      beforePrice: 9600,
+      afterPrice: 7200,
     },
   ];
   intermediate = [
@@ -55,8 +56,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Projects and Applications',
         'Industrial way of code',
       ],
-      beforePrice: '9,600',
-      afterPrice: '7,200',
+      beforePrice: 9600,
+      afterPrice: 7200,
     },
     {
       name: 'C++',
@@ -67,8 +68,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Projects and Applications',
         'Industrial way of code',
       ],
-      beforePrice: '9,600',
-      afterPrice: '7,200',
+      beforePrice: 9600,
+      afterPrice: 7200,
     },
     {
       name: 'Mobile App Dev',
@@ -79,8 +80,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Create a To-Do List App',
         'Create a Chat-App',
       ],
-      beforePrice: '9,600',
-      afterPrice: '7,200',
+      beforePrice: 9600,
+      afterPrice: 7200,
     },
   ];
   special = [
@@ -93,8 +94,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Projects and Applications',
         'Industrial way of code',
       ],
-      beforePrice: '12,800',
-      afterPrice: '9,600',
+      beforePrice: 12800,
+      afterPrice: 9600,
     },
     {
       name: 'Solidworks',
@@ -105,8 +106,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Projects and Applications',
         'Industrial way of code',
       ],
-      beforePrice: '9,600',
-      afterPrice: '7,200',
+      beforePrice: 9600,
+      afterPrice: 7200,
     },
     {
       name: 'Mobile App Dev',
@@ -117,8 +118,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Create a To-Do List App',
         'Create a Chat-App',
       ],
-      beforePrice: '9,600',
-      afterPrice: '7,200',
+      beforePrice: 9600,
+      afterPrice: 7200,
     },
   ];
 
@@ -126,22 +127,22 @@ export class CoursesWeTeachComponent implements OnInit {
   intermediateShow: boolean = false;
   specialisationShow: boolean = false;
   longAarrowAltRight = faLongArrowAltRight;
+  visibleCourse = this.beginner;
+
   constructor() {}
 
   ngOnInit(): void {}
   clickOnBeginner() {
-    this.intermediateShow = false;
-    this.specialisationShow = false;
-    this.beginnerShow = true;
+    this.visibleCourse = this.beginner;
   }
   clickOnIntermediate() {
-    this.specialisationShow = false;
-    this.beginnerShow = false;
-    this.intermediateShow = true;
+    this.visibleCourse = this.intermediate;
   }
   clickOnSpec() {
-    this.beginnerShow = false;
-    this.intermediateShow = false;
-    this.specialisationShow = true;
+    this.visibleCourse = this.special;
+  }
+
+  offerCalculator(finalPrice: number, initialPrice: number) {
+    return `${((finalPrice - initialPrice) / finalPrice) * 100}% Off`;
   }
 }

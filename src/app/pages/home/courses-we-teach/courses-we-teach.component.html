@@ -7,15 +7,6 @@
     class="container bring-to-front"
     style="padding-bottom: 0 !important; margin-bottom: 0 !important;"
   >
-    <!-- <div class="col-12 col-md-5 col-lg-5 mr-md-auto text-center text-lg-left">
-        <i-feather name="box" class="wh36 stroke-primary"></i-feather>
-        <p class="small text-primary bold">Technical or Non-Technical, Coding skills are must</p>
-        <h2 class="bold">Courses to Boost your Career</h2>
-        <p class="text-secondary">
-          Join us now and experience revolutionised learning. Follow your passion, learn from experienced mentors,
-          choose your calling from a selection of well-designed courses and start your journey today
-        </p>
-      </div> -->
     <div
       class="tabs"
       style="margin-bottom: 0 !important; padding-bottom: 0 !important;"
@@ -58,11 +49,11 @@
       <div class="slider"><div class="indicator"></div></div>
     </div>
     <div>
-      <div id="generic_price_table" *ngIf="beginnerShow">
+      <div id="generic_price_table">
         <section>
           <div class="container" style="padding-top: 0 !important ;">
             <div class="row">
-              <div class="col-md-4" *ngFor="let item of beginner">
+              <div class="col-md-4" *ngFor="let item of visibleCourse">
                 <div class="generic_content clearfix hover-feature">
                   <div class="generic_head_price clearfix">
                     <div class="generic_head_content clearfix">
@@ -72,6 +63,9 @@
                       <div class="head_bg"></div>
                       <div class="head">
                         <span>{{ item.name }}</span>
+                        <span class="percent-off" style="margin-top: -2em;">{{
+                          offerCalculator(item.beforePrice, item.afterPrice)
+                        }}</span>
                       </div>
                     </div>
                     <div class="generic_price_tag clearfix">
@@ -93,106 +87,14 @@
                     </ul>
                   </div>
                   <div class="">
-                    <s>₹{{ item.beforePrice }}</s>
-                    <h5>₹{{ item.afterPrice }}</h5>
+                    <s>{{
+                      item.beforePrice | currency: "INR":"symbol":"3.0-0"
+                    }}</s>
+                    <h5>
+                      {{ item.afterPrice | currency: "INR":"symbol":"3.0-0" }}
+                    </h5>
                   </div>
 
-                  <div class="generic_price_btn clearfix">
-                    <a class="" href="">Free Demo Class</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div id="generic_price_table" *ngIf="intermediateShow">
-        <section>
-          <div class="container" style="padding-top: 0 !important ;">
-            <div class="row">
-              <div class="col-md-4" *ngFor="let item of intermediate">
-                <div class="generic_content clearfix hover-feature">
-                  <div class="generic_head_price clearfix">
-                    <div class="generic_head_content clearfix">
-                      <div class="pt-1 mb-1" style="color: white;">
-                        Intermediate
-                      </div>
-                      <div class="head_bg"></div>
-                      <div class="head">
-                        <span>{{ item.name }}</span>
-                      </div>
-                    </div>
-                    <div class="generic_price_tag clearfix">
-                      <span class="price">
-                        <!-- <span class="sign">$</span> -->
-                        <!-- <span class="currency">21</span> -->
-                        <span class="cent" style="color: white;"
-                          >{{ item.lectures }} Lectures</span
-                        >
-                        <!-- <span class="month"> Classes</span> -->
-                      </span>
-                    </div>
-                  </div>
-                  <div class="generic_feature_list">
-                    <ul>
-                      <li *ngFor="let feat of item.features">
-                        <span>{{ feat }}</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="">
-                    <s>₹{{ item.beforePrice }}</s>
-                    <h5>₹{{ item.afterPrice }}</h5>
-                  </div>
-                  <div class="generic_price_btn clearfix">
-                    <a class="" href="">Free Demo Class</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div id="generic_price_table" *ngIf="specialisationShow">
-        <section>
-          <div class="container" style="padding-top: 0 !important ;">
-            <div class="row">
-              <div class="col-md-4" *ngFor="let item of special">
-                <div class="generic_content clearfix hover-feature">
-                  <div class="generic_head_price clearfix">
-                    <div class="generic_head_content clearfix">
-                      <div class="pt-1 mb-1" style="color: white;">
-                        Specialisation
-                      </div>
-                      <div class="head_bg"></div>
-                      <div class="head">
-                        <span>{{ item.name }}</span>
-                      </div>
-                    </div>
-                    <div class="generic_price_tag clearfix">
-                      <span class="price">
-                        <!-- <span class="sign">$</span> -->
-                        <!-- <span class="currency">21</span> -->
-                        <span class="cent" style="color: white;"
-                          >{{ item.lectures }} Lectures</span
-                        >
-                        <!-- <span class="month"> Classes</span> -->
-                      </span>
-                    </div>
-                  </div>
-                  <div class="generic_feature_list">
-                    <ul>
-                      <li *ngFor="let feat of item.features">
-                        <span>{{ feat }}</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="">
-                    <s>₹{{ item.beforePrice }}</s>
-                    <h5>₹{{ item.afterPrice }}</h5>
-                  </div>
                   <div class="generic_price_btn clearfix">
                     <a class="" href="">Free Demo Class</a>
                   </div>

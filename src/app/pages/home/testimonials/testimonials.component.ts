@@ -9,11 +9,13 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 })
 export class TestimonialsComponent implements OnInit {
   public config: SwiperConfigInterface = {
-    slidesPerView: 1,
-    centeredSlides: true,
-    autoplay: false,
+    slidesPerView: 3,
+    centeredSlides: false,
+    autoplay: true,
     navigation: true,
     pagination: false,
+    initialSlide: 1,
+    updateOnWindowResize: true,
   };
 
   items = [
