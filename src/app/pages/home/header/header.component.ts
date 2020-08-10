@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
   elements = [
     {
       icon: 'plan',
-      title: 'Improves Logics',
+      title: 'Improves Logic',
       description: '',
     },
     {
@@ -27,16 +27,16 @@ export class HeaderComponent implements OnInit {
       title: 'Increases Imagination and Creativity',
       description: '',
     },
-    {
-      icon: 'work',
-      title: 'Nurture Focus and Concentration',
-      description: '',
-    },
-    {
-      icon: 'work',
-      title: 'One Step Forward in their Career',
-      description: '',
-    },
+    // {
+    //   icon: 'work',
+    //   title: 'Nurture Focus and Concentration',
+    //   description: '',
+    // },
+    // {
+    //   icon: 'work',
+    //   title: 'One Step Forward in their Career',
+    //   description: '',
+    // },
   ];
   constructor() {}
 

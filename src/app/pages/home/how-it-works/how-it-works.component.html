@@ -1,18 +1,11 @@
-<section
-  id="features"
-  class="section how-it-works"
-  style="padding-top: 0 !important; margin-top: 0 !important;"
->
+<section id="features" class="section how-it-works" style="padding-top: 0 !important; margin-top: 0 !important;">
   <div class="shapes-container">
     <div class="shape shape-ring" data-aos="fade-right">
       <div></div>
     </div>
   </div>
 
-  <div
-    class="container"
-    style="padding-top: 0 !important; margin-top: 0 !important;"
-  >
+  <div class="container" style="padding-top: 0 !important; margin-top: 0 !important;">
     <div class="section-heading text-center">
       <h2 class="bold">Why Choose Us?</h2>
       <p class="lead text-secondary">
@@ -21,15 +14,12 @@
     </div>
 
     <div class="row gap-y text-center text-md-left">
-      <div class="col-md-4 py-4 text-center" *ngFor="let element of elements">
+      <div class="col-md-3 py-4 text-center" *ngFor="let element of elements">
         <div class="shapes-figure shapes-container">
           <div class="shape shape-circle center-x"></div>
         </div>
         <figure class="mockup mb-4">
-          <img
-            [src]="'assets/img/integration/steps/' + element.icon + '.svg'"
-            class="mb-3 image-responsive"
-          />
+          <img [src]="'assets/img/integration/steps/' + element.icon + '.svg'" class="mb-3 image-responsive" />
         </figure>
 
         <h5 class="bold">{{ element.title }}</h5>

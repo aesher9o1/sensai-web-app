@@ -3,50 +3,26 @@
     <img src="assets/img/shps/shape-2.svg" class="shape-right" alt="..." />
   </div>
 
-  <div
-    class="container bring-to-front"
-    style="padding-bottom: 0 !important; margin-bottom: 0 !important;"
-  >
-    <div
-      class="tabs"
-      style="margin-bottom: 0 !important; padding-bottom: 0 !important;"
-    >
-      <input
-        type="radio"
-        id="tab1"
-        (click)="clickOnBeginner()"
-        name="tab-control"
-        checked
-      />
-      <input
-        type="radio"
-        id="tab2"
-        (click)="clickOnIntermediate()"
-        name="tab-control"
-      />
-      <input
-        type="radio"
-        id="tab3"
-        (click)="clickOnSpec()"
-        name="tab-control"
-      />
+  <div class="container bring-to-front" style="padding-bottom: 0 !important; margin-bottom: 0 !important;">
+    <div class="tabs" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
+      <input type="radio" id="tab1" (click)="clickOnBeginner()" name="tab-control" checked />
+      <input type="radio" id="tab2" (click)="clickOnIntermediate()" name="tab-control" />
+      <input type="radio" id="tab3" (click)="clickOnSpec()" name="tab-control" />
       <ul>
         <li title="Features">
           <label for="tab1" role="button">Beginner<br /><span></span></label>
         </li>
         <li title="Delivery Contents">
-          <label for="tab2" role="button"
-            >Intermediate<br /><span></span
-          ></label>
+          <label for="tab2" role="button">Intermediate<br /><span></span></label>
         </li>
         <li title="Shipping">
-          <label for="tab3" role="button"
-            >Specialisation<br /><span></span
-          ></label>
+          <label for="tab3" role="button">Specialisation<br /><span></span></label>
         </li>
       </ul>
 
-      <div class="slider"><div class="indicator"></div></div>
+      <div class="slider">
+        <div class="indicator"></div>
+      </div>
     </div>
     <div>
       <div id="generic_price_table">
@@ -54,16 +30,17 @@
           <div class="container" style="padding-top: 0 !important ;">
             <div class="row">
               <div class="col-md-4" *ngFor="let item of visibleCourse">
-                <div class="generic_content clearfix hover-feature">
+                <div class="generic_content clearfix hover-feature" style="border-radius: 25px!important ;">
                   <div class="generic_head_price clearfix">
                     <div class="generic_head_content clearfix">
-                      <div class="pt-1 mb-1" style="color: white;">
+                      <!-- <div class="pt-1 mb-1" style="color: white;">
                         Beginner
-                      </div>
+                      </div> -->
                       <div class="head_bg"></div>
                       <div class="head">
                         <span>{{ item.name }}</span>
-                        <span class="percent-off" style="margin-top: -2em;">{{
+                        <span class="percent-off pl-2 pr-2 pt-1 pb-1" style="margin-top: -2em; background-color: #F44336
+                          ; border-top-right-radius: 20px; border-bottom-right-radius: 20px;">{{
                           offerCalculator(item.beforePrice, item.afterPrice)
                         }}</span>
                       </div>
@@ -72,9 +49,7 @@
                       <span class="price">
                         <!-- <span class="sign">$</span> -->
                         <!-- <span class="currency">21</span> -->
-                        <span class="cent" style="color: white;"
-                          >{{ item.lectures }} Lectures</span
-                        >
+                        <span class="cent" style="color: white;">{{ item.lectures }} Lectures</span>
                         <!-- <span class="month"> Classes</span> -->
                       </span>
                     </div>
@@ -96,7 +71,7 @@
                   </div>
 
                   <div class="generic_price_btn clearfix">
-                    <a class="" href="">Free Demo Class</a>
+                    <a class="" (click)="scrollToElement('contact')">Free Demo Class</a>
                   </div>
                 </div>
               </div>

@@ -18,6 +18,32 @@ import {
   styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent implements OnInit {
+  topics = [
+    {
+      value: 'python',
+      name: 'Python Programming',
+    },
+    {
+      value: 'c-plus-plus',
+      name: 'C++ Programming',
+    },
+    {
+      value: 'IoT',
+      name: 'Internet of Things',
+    },
+    {
+      value: 'flutter',
+      name: 'Mobile Application Development',
+    },
+    {
+      value: 'solidworks',
+      name: 'Solidworks',
+    },
+    {
+      value: 'others',
+      name: 'Others',
+    },
+  ];
   contactForm: FormGroup;
   message = {
     class: '',

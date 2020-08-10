@@ -28,11 +28,8 @@
               <label for="contact_email" class="bold">Subject</label>
               <select formControlName="topic" class="form-control bg-contrast">
                 <option value="" selected class="d-none">Choose a topic</option>
-                <option value="python">Python Programming</option>
-                <option value="c-plus-plus">C++ Programming</option>
-                <option value="IoT">IoT/Robotics</option>
-                <option value="solidworks">SolidWorks</option>
-                <option value="others">Other</option>
+                <option *ngFor="let item of topics" value="{{item.value}}">{{item.name}}</option>
+
               </select>
             </div>
 

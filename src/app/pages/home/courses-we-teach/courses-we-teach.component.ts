@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 import { emit } from 'process';
+import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses-we-teach',
@@ -42,8 +44,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Create a bluetooth control car',
         'Hardware Kit included',
       ],
-      beforePrice: 9600,
-      afterPrice: 7200,
+      beforePrice: 12800,
+      afterPrice: 9600,
     },
   ];
   intermediate = [
@@ -73,15 +75,15 @@ export class CoursesWeTeachComponent implements OnInit {
     },
     {
       name: 'Mobile App Dev',
-      lectures: '24',
+      lectures: '35',
       features: [
         '1-1 Personalised lectures',
         'Extensive Hands on Practice',
         'Create a To-Do List App',
         'Create a Chat-App',
       ],
-      beforePrice: 9600,
-      afterPrice: 7200,
+      beforePrice: 17000,
+      afterPrice: 13500,
     },
   ];
   special = [
@@ -106,8 +108,8 @@ export class CoursesWeTeachComponent implements OnInit {
         'Projects and Applications',
         'Industrial way of code',
       ],
-      beforePrice: 9600,
-      afterPrice: 7200,
+      beforePrice: 12800,
+      afterPrice: 9600,
     },
     {
       name: 'Mobile App Dev',
@@ -129,7 +131,10 @@ export class CoursesWeTeachComponent implements OnInit {
   longAarrowAltRight = faLongArrowAltRight;
   visibleCourse = this.beginner;
 
-  constructor() {}
+  constructor(
+    private scrollToService: ScrollToService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
   clickOnBeginner() {
@@ -144,5 +149,14 @@ export class CoursesWeTeachComponent implements OnInit {
 
   offerCalculator(finalPrice: number, initialPrice: number) {
     return `${((finalPrice - initialPrice) / finalPrice) * 100}% Off`;
+  }
+  scrollToElement(target: string, page: string = ''): void {
+    this.router.navigate([`/${page}`]).then(() => {
+      setTimeout(() => {
+        this.scrollToService.scrollTo({
+          target,
+        });
+      }, 0);
+    });
   }
 }
