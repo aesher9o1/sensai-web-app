@@ -14,7 +14,7 @@ export class HowItWorksComponent implements OnInit {
     },
     {
       icon: 'payment',
-      title: 'Interactive Learning ',
+      title: 'Interactive Hands-On Learning ',
       description: '',
     },
     {

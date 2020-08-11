@@ -22,6 +22,11 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 9600,
       afterPrice: 7200,
+      bg: '#00a190',
+      animation: 'fade-up',
+      class: 'features-beg',
+      button: 'btn-success',
+      readMore: false,
     },
     {
       name: 'C++',
@@ -34,9 +39,14 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 9600,
       afterPrice: 7200,
+      bg: '#00a190',
+      animation: 'fade-up',
+      class: 'features-beg',
+      button: 'btn-success',
+      readMore: false,
     },
     {
-      name: 'IOT',
+      name: 'IoT',
       lectures: '10',
       features: [
         '1-1 Personalised lectures',
@@ -46,6 +56,11 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 12800,
       afterPrice: 9600,
+      bg: '#00a190',
+      animation: 'fade-up',
+      class: 'features-beg',
+      button: 'btn-success',
+      readMore: false,
     },
   ];
   intermediate = [
@@ -60,6 +75,11 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 9600,
       afterPrice: 7200,
+      bg: '#feab47',
+      animation: 'fade-up',
+      class: 'features-int',
+      button: 'btn-warning',
+      readMore: false,
     },
     {
       name: 'C++',
@@ -72,6 +92,11 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 9600,
       afterPrice: 7200,
+      bg: '#feab47',
+      animation: 'fade-up',
+      class: 'features-int',
+      button: 'btn-warning',
+      readMore: false,
     },
     {
       name: 'Mobile App Dev',
@@ -84,6 +109,11 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 17000,
       afterPrice: 13500,
+      bg: '#feab47',
+      animation: 'fade-up',
+      class: 'features-int',
+      button: 'btn-warning',
+      readMore: false,
     },
   ];
   special = [
@@ -98,6 +128,11 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 12800,
       afterPrice: 9600,
+      bg: '#dc0065',
+      animation: 'fade-up',
+      class: 'features-sp',
+      button: 'btn-danger',
+      readMore: false,
     },
     {
       name: 'Solidworks',
@@ -110,6 +145,11 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 12800,
       afterPrice: 9600,
+      bg: '#dc0065',
+      animation: 'fade-up',
+      class: 'features-sp',
+      button: 'btn-danger',
+      readMore: false,
     },
     {
       name: 'Mobile App Dev',
@@ -122,6 +162,11 @@ export class CoursesWeTeachComponent implements OnInit {
       ],
       beforePrice: 9600,
       afterPrice: 7200,
+      bg: '#dc0065',
+      animation: 'fade-up',
+      class: 'features-sp',
+      button: 'btn-danger',
+      readMore: false,
     },
   ];
 
@@ -130,7 +175,7 @@ export class CoursesWeTeachComponent implements OnInit {
   specialisationShow: boolean = false;
   longAarrowAltRight = faLongArrowAltRight;
   visibleCourse = this.beginner;
-
+  showDetails: boolean = false;
   constructor(
     private scrollToService: ScrollToService,
     private router: Router
@@ -146,9 +191,14 @@ export class CoursesWeTeachComponent implements OnInit {
   clickOnSpec() {
     this.visibleCourse = this.special;
   }
+  clickOnReadMore(i) {
+    this.visibleCourse[i].readMore = !this.visibleCourse[i].readMore;
+  }
 
   offerCalculator(finalPrice: number, initialPrice: number) {
-    return `${((finalPrice - initialPrice) / finalPrice) * 100}% Off`;
+    return `${Math.ceil(
+      ((finalPrice - initialPrice) / finalPrice) * 100
+    )}% Off`;
   }
   scrollToElement(target: string, page: string = ''): void {
     this.router.navigate([`/${page}`]).then(() => {
