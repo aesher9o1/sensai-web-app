@@ -26,40 +26,67 @@
     </div>
     <div class="row mb-4">
       <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-4 mb-4 hover-feature"
-        *ngFor="let card of visibleCourse;  let i = index">
+        *ngFor="let card of visibleCourse; let i = index">
         <div class="rounded text-contrast p-2 p-sm-4 shadow text-center" [style.background-color]="card.bg"
           [attr.data-aos]="card.animation">
           <!-- <img [src]="'assets/img/logos/' + card.img + '.svg'" class="img-responsive op-8 px-0 px-sm-4" alt="..." /> -->
           <span class="percent-off pl-2 pr-2 pt-1 pb-1">{{
-          offerCalculator(card.beforePrice, card.afterPrice)
-        }}</span>
-          <p class="bold mt-3" style="font-size: 16pt">{{ card.name }}</p>
-          <p class=" mt-3" style="font-size: 13pt">{{ card.lectures }} Lectures</p>
+            offerCalculator(card.beforePrice, card.afterPrice)
+          }}</span>
+          <div *ngIf="!card.readMore">
+            <p class="bold mt-3" style="font-size: 16pt;">{{ card.name }}</p>
+            <p class="mt-3" style="font-size: 13pt;">
+              {{ card.lectures }} Lectures
+            </p>
 
-          <hr>
-          <p style="font-size: 11pt;" class="{{card.class}}" *ngFor="let item of card.features">{{ item }}</p>
+            <hr />
+            <p style="font-size: 11pt;" class="{{ card.class }}" *ngFor="let item of card.features">
+              {{ item }}
+            </p>
 
-          <hr>
-          <h5><s style="color: white!important;">{{card.beforePrice | currency: "INR":"symbol":"3.0-0"}}</s></h5>
-          <h3 style="color: white!important;">{{card.afterPrice | currency: "INR":"symbol":"3.0-0"}}</h3>
+            <hr />
+            <h5>
+              <s style="color: white !important;">{{
+                card.beforePrice | currency: "INR":"symbol":"3.0-0"
+              }}</s>
+            </h5>
+            <h3 style="color: white !important;">
+              {{ card.afterPrice | currency: "INR":"symbol":"3.0-0" }}
+            </h3>
+          </div>
+          <div *ngIf="card.readMore">
+            <div class="row">
+              <div class="col-12 text-left mt-4" style="font-size: 10pt;">
+                <b style="font-size: 12pt;"> Course Curriculum</b>
 
-          <a (click)="scrollToElement('contact')" class="btn btn-rounded btn-contrast mt-4" style="color:black">
+                {{ card.aboutCourse }}
+              </div>
+              <hr />
+              <div class="col-12 mt-4">
+                <p class="text-left" style="margin-bottom: 0;">More than</p>
+                <p style="font-size: 24pt;">
+                  {{ card.courseHandsOn }} Hands On Hours
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a (click)="scrollToElement('contact', [card.key, card.level, card.name] )"
+            class="btn btn-rounded btn-contrast mt-4" style="color: black;">
             <!-- <fa-icon [icon]="longAarrowAltRight" class="d-inline-block d-sm-none"></fa-icon> -->
-            <span class="d-sm-inline-block">Free Demo Class</span>
-          </a><br>
-          <a class="btn btn-rounded {{card.button}} mt-4" (click)="clickOnReadMore(i)" style="color: white;">
+            <span class="d-sm-inline-block">Free Demo Class</span> </a><br />
+          <a class="btn btn-rounded {{ card.button }} mt-4" (click)="clickOnReadMore(i)" style="color: white;"
+            *ngIf="!card.readMore">
             <!-- <fa-icon [icon]="longAarrowAltRight" class="d-inline-block d-sm-none"></fa-icon> -->
             <span class="d-sm-inline-block">Read More</span>
           </a>
-
-          <div *ngIf="card.readMore">
-            <hr>
-          </div>
-
-
+          <a class="btn btn-rounded {{ card.button }} mt-4" (click)="clickOnReadMore(i)" style="color: white;"
+            *ngIf="card.readMore">
+            <!-- <fa-icon [icon]="longAarrowAltRight" class="d-inline-block d-sm-none"></fa-icon> -->
+            <span class="d-sm-inline-block">Go Back</span>
+          </a>
         </div>
       </div>
     </div>
-
   </div>
 </section>

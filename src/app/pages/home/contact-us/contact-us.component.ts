@@ -11,6 +11,7 @@ import {
   faTwitter,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import { subject } from '../subject';
 
 @Component({
   selector: 'app-contact-us',
@@ -40,6 +41,10 @@ export class ContactUsComponent implements OnInit {
       name: 'Solidworks',
     },
     {
+      value: 'machine-learning',
+      name: 'Machine Learning',
+    },
+    {
       value: 'others',
       name: 'Others',
     },
@@ -62,6 +67,16 @@ export class ContactUsComponent implements OnInit {
     private formBuilder: FormBuilder,
     private db: AngularFireDatabase
   ) {
+    subject.subscribe((value) => {
+      let mssg = 'Information required about ' + value[1] + ' ' + value[2];
+      this.contactForm.setValue({
+        name: '',
+        phone: '',
+        email: '',
+        topic: value[0],
+        message: mssg,
+      });
+    });
     this.contactForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(4)]],
       phone: [

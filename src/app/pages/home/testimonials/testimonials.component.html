@@ -1,9 +1,9 @@
 <section class="section bg-light">
   <div class="container bring-to-front py-0">
-    <div class="shadow bg-contrast p-5 rounded">
-      <div class="testimonials-slider">
+    <!-- <div class="shadow bg-contrast p-5 rounded"> -->
+    <!-- <div class="testimonials-slider">
         <swiper [config]="config" class="swiper-container pb-5">
-          <div class="swiper-slide col-12 col-lg-4" *ngFor="let i of items">
+          <div class="swiper-slide col-12 " *ngFor="let i of items">
             <div class="d-flex flex-column align-items-center ">
               <img src="assets/img/testimonials/{{ i.image }}.jpg" alt="" class="rounded-circle shadow mb-4" />
 
@@ -21,7 +21,29 @@
             </div>
           </div>
         </swiper>
+      </div> -->
+
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-3" *ngFor="let i of items">
+        <div class="card">
+          <div class="layer"></div>
+          <div class="content text-left">
+            <p> {{ i.description }}
+            </p>
+            <div class="image"><img class="rounded-circle shadow mb-4" src="assets/img/testimonials/{{ i.image }}.jpg"
+                alt="avatar">
+            </div>
+            <div class="details">
+              <cite class="bold text-capitalize" style="color: white">— {{ i.name }},</cite>
+              <span class="small mt-0" style="color: white">{{
+                    i.designation
+                  }}</span> </div>
+          </div>
+        </div>
       </div>
     </div>
+
+
+    <!-- </div> -->
   </div>
 </section>

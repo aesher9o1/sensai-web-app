@@ -2,3 +2,60 @@
   height: 80px;
   width: 80px;
 }
+
+
+
+.card {
+  // position: relative;
+  // margin: 0 auto;
+  color: rgb(243, 243, 243);
+  margin-top: 10px;
+  width: auto;
+  background: #333;
+  padding: 20px;
+  // box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+  overflow: hidden;
+}
+
+.card .layer {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#111111, #2b2b2b);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.card:hover .layer {
+  top: 0;
+}
+
+.card .content {
+  position: relative;
+  z-index: 2;
+}
+
+.card .content p {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+
+
+.card .content .details h2 {
+  font-size: 18px;
+}
+
+.card .content .details span {
+  color: #03a9f4;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+.card:hover .content .details span {
+  color: #fff;
+}

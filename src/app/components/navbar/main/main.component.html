@@ -1,11 +1,16 @@
 <app-shell [darkLinks]="true" [useOnlyDarkLogo]="true">
   <ul class="nav navbar-nav" [class.ml-auto]="true">
-    <li class="nav-item"><a class="nav-link" [routerLink]="['/']">Home</a></li>
-    <li class="nav-item">
-      <a class="nav-link" (click)="scrollToElement('mentors', 'team')">Team</a>
+    <li class="nav-item mr-2" style="height: 2px!important;"><a class="nav-link btn btn-rounded btn-outline"
+        style="padding-top: 5px; padding-bottom: 5px" [routerLink]="['/']">Home</a>
+    </li>
+    <li class="nav-item mr-2  ">
+      <a class="nav-link btn btn-rounded btn-outline " style="padding-top: 5px; padding-bottom: 5px"
+        (click)="scrollToElement('mentors', 'team')">Team</a>
     </li>
     <li class=" nav-item">
-      <a class="nav-link" (click)="scrollToElement('about')">About Us</a>
+      <a class="nav-link  btn btn-rounded btn-outline" (click)="scrollToElement('about')"
+        style="padding-top: 5px; padding-bottom: 5px">About
+        Us</a>
     </li>
   </ul>
 
