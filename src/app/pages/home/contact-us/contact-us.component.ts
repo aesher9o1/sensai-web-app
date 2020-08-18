@@ -68,7 +68,7 @@ export class ContactUsComponent implements OnInit {
     private db: AngularFireDatabase
   ) {
     subject.subscribe((value) => {
-      let mssg = 'Information required about ' + value[1] + ' ' + value[2];
+      let mssg = 'Free Demo Class for ' + value[1] + ' ' + value[2];
       this.contactForm.setValue({
         name: '',
         phone: '',

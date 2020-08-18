@@ -36,6 +36,7 @@ export class MainComponent implements OnInit {
       setTimeout(() => {
         this.scrollToService.scrollTo({
           target,
+          offset: -300,
         });
       }, 0);
     });

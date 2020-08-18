@@ -8,22 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   elements = [
     {
-      icon: 'plan',
+      icon: 'improves_logic',
       title: 'Improves Logic',
       description: '',
     },
     {
-      icon: 'payment',
+      icon: 'better_optimization',
       title: 'Better Problem Solving and Optimization',
       description: '',
     },
     {
-      icon: 'work',
+      icon: 'critical_thinking',
       title: 'High Critical Thinking',
       description: '',
     },
     {
-      icon: 'work',
+      icon: 'imagination',
       title: 'Increases Imagination and Creativity',
       description: '',
     },

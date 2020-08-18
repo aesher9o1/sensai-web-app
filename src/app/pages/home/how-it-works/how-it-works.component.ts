@@ -8,18 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class HowItWorksComponent implements OnInit {
   elements = [
     {
-      icon: 'plan',
-      title: 'Personalised Courses',
+      icon: '1-1',
+      title: 'Personalised 1-1 Mentorship',
       description: '',
     },
     {
-      icon: 'payment',
+      icon: 'hands-on',
       title: 'Interactive Hands-On Learning ',
       description: '',
     },
     {
-      icon: 'work',
+      icon: 'experienced',
       title: 'Experienced Mentors',
+      description: '',
+    },
+    {
+      icon: 'logic-building',
+      title: 'Targets Logic Building and Understanding',
       description: '',
     },
   ];
