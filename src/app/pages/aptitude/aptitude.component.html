@@ -78,6 +78,15 @@
         <div class="row ml-1">
           <h4>{{ section.name }}</h4>
         </div>
+        <div class="col-12" *ngIf="section.img">
+          <img src="{{section.img}}" alt="" style="max-width: 90vw;" />
+        </div>
+        <div *ngIf="section.note">
+          <h6>Note:</h6>
+          <ol>
+            <li *ngFor="let note of section.note">{{note}}</li>
+          </ol>
+        </div>
         <div *ngFor="let question of section.questions">
           <p class="bold">
             Q.

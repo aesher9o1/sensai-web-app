@@ -14,24 +14,24 @@ export class CoreComponent implements OnInit {
     //   image: 'EykWcFEtFqo',
     // },
 
-    {
-      gravity: 'north',
-      title: 'Priya Arora',
-      description: 'Worked at Delhivery & Benori before',
-      image: 'url(assets/img/team/priya.jpg)',
-    },
-    {
-      gravity: 'east',
-      title: 'Syed Amjad',
-      description: 'Loves agile environment and management',
-      image: 'url(assets/img/team/syed.jpg)',
-    },
-    {
-      gravity: 'north',
-      title: 'Sonali Banik',
-      description: 'Operations under her, Upcoming L&T Employee',
-      image: 'url(assets/img/team/sonali.jpg)',
-    },
+    // {
+    //   gravity: 'north',
+    //   title: 'Priya Arora',
+    //   description: 'Worked at Delhivery & Benori before',
+    //   image: 'url(assets/img/team/priya.jpg)',
+    // },
+    // {
+    //   gravity: 'east',
+    //   title: 'Syed Amjad',
+    //   description: 'Loves agile environment and management',
+    //   image: 'url(assets/img/team/syed.jpg)',
+    // },
+    // {
+    //   gravity: 'north',
+    //   title: 'Sonali Banik',
+    //   description: 'Operations under her, Upcoming L&T Employee',
+    //   image: 'url(assets/img/team/sonali.jpg)',
+    // },
     {
       gravity: 'north',
       title: 'Shreya Jaggi',

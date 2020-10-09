@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeadingCoursesComponent implements OnInit {
   stacks = [
-    { name: 'Dell', image: 'dell' },
+    // { name: 'Dell', image: 'dell' },
     { name: 'GE', image: 'ge' },
     { name: 'QuillBot', image: 'quill' },
     // { name: 'Styles', image: 'node-sass' },
@@ -30,11 +30,11 @@ export class LeadingCoursesComponent implements OnInit {
       title: 'Tanya Agarwal',
       description: 'Enterprise Solution Specialist, General Electric',
     },
-    {
-      icon: 'url(assets/img/mentors/tanuj.jpg)',
-      title: 'Tanuj Sahal',
-      description: 'Application Development Consultant, Microsoft',
-    },
+    // {
+    //   icon: 'url(assets/img/mentors/tanuj.jpg)',
+    //   title: 'Tanuj Sahal',
+    //   description: 'Application Development Consultant, Microsoft',
+    // },
   ];
 
   constructor() {}

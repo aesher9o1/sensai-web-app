@@ -1,7 +1,7 @@
 <app-shell [darkLinks]="true" [useOnlyDarkLogo]="true">
   <ul class="nav navbar-nav" [class.ml-auto]="true">
     <li class="nav-item mr-2" style="height: 2px!important;"><a class="nav-link btn btn-rounded btn-outline"
-        style="padding-top: 5px; padding-bottom: 5px" [routerLink]="['/']">Home</a>
+        style="padding-top: 5px; padding-bottom: 5px" (click)="scrollToElement('home')">Home</a>
     </li>
     <li class="nav-item mr-2  ">
       <a class="nav-link btn btn-rounded btn-outline " style="padding-top: 5px; padding-bottom: 5px"

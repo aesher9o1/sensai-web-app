@@ -49,6 +49,12 @@ export class AptitudeComponent implements OnInit {
 
     this.questions.push({
       key: 'data-interpretaion',
+      name: 'Data Interpretation',
+      img: 'assets/img/data.png',
+      note: [
+        'The players in the Commercial Vehicle Segment are Ashok-Leyland, Telco, Bajaj Tempo and DCM-Toyota.',
+        'The players in the Passenger Car Segment are Hind Motors, Maruti and Premier Auto.',
+      ],
       questions: this.questionHelper.getDI(),
     });
   }

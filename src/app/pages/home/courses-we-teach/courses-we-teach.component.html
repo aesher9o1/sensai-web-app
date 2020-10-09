@@ -3,7 +3,14 @@
     <img src="assets/img/shps/shape-2.svg" class="shape-right" alt="..." />
   </div>
 
+
   <div class="container bring-to-front" style="padding-bottom: 0 !important; margin-bottom: 0 !important;">
+    <div class="row">
+      <h4 class="mx-auto text-primary mb-4 text-center">
+        Early Bird offer lasts till <strong>{{todaysDate}}</strong> Midnight! <br> <small>Book your Demo Class
+          Today!</small>
+      </h4>
+    </div>
     <div class="tabs" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
       <input type="radio" id="tab1" (click)="clickOnBeginner()" name="tab-control" checked />
       <input type="radio" id="tab2" (click)="clickOnIntermediate()" name="tab-control" />
@@ -68,6 +75,13 @@
                   {{ card.courseHandsOn }} Hands On Hours
                 </p>
               </div>
+              <div class="col-12">
+                <p class="text-left" style="margin-bottom: 0;">You will be creating</p>
+                <p style="font-size: 18pt;">
+                  {{ card.project }}
+                </p>
+              </div>
+
             </div>
           </div>
 
